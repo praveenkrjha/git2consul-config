@@ -1,7 +1,7 @@
 {
   "Applications": [
     {
-      "Edition": "Standard",
+      "Edition": "Standard.1",
       "Name": "Wires"
     }
   ],
