@@ -1,0 +1,18 @@
+{
+    "certificates" :
+    [
+        "{{secret:CSS-IdentityService-CertificateValidation-Intermediate-ETSMMOPKICA02-CA}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-Intermediate-JHARSASHA2562020CA3}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-Root-ETSMMOMNPKIOR02-CA}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-Root-JHARootCAG3}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertBaltimoreSMIMERSASHA2562020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertBaltimoreTLSRSASHA2562020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertGlobalG2TLSRSASHA2562020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertGlobalG3TLSECCSHA3842020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertSHA2SecureServerCA-2}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertTLSHybridECCSHA3842020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertTLSRSASHA2562020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertTrustedG4TLSRSASHA3842020CA1}}",
+        "{{secret:CSS-IdentityService-CertificateValidation-DigiCertRoot}}"
+    ]
+}

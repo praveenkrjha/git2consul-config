@@ -1,0 +1,140 @@
+{
+  "AllowedHosts": "*",
+  "CacheSettings": {
+    "InMemoryCacheTimeout": "100000",
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}"
+  },
+  "HeaderValidation": {
+    "Headers": [
+      "Content-Type",
+      "X-CSS-Correlation-Id",
+      "X-Request-Id",
+      "X-Correlation-Id",
+      "X-AuditUserId",
+      "X-AuditDeviceId",
+      "X-BusinessCorrelationId",
+      "X-WorkflowCorrelationId",
+      "X-AuthenticationUserCredential",
+      "X-AuthenticationProductCredential",
+      "X-FaultOverride",
+      "Accept",
+      "Accept-Encoding",
+      "Accept-Language",
+      "Authorization",
+      "Host",
+      "Referer",
+      "Sec-Fetch-Dest",
+      "Sec-Fetch-Mode",
+      "Sec-Fetch-Site",
+      "Sec-Fetch-User",
+      "User-Agent",
+      ":Method",
+      ":Authority",
+      ":Scheme",
+      ":Path",
+      "Postman-Token",
+      "Connection",
+      "Cache-Control",
+      "Date",
+      "X-FaultOverrideList",
+      "Origin",
+      "Content-Length",
+      "x-SKIP-LOADER-INTERCEPTOR",
+      "Cookie",
+      "Expect",
+      "If-None-Match",
+      "Pragma",
+      "Expires",
+      "If-Modified-Since"
+    ]
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/gateway/swagger",
+      "/api/gateway/hc",
+      "/swagger"
+    ]
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "ApiGateway.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "ApiGateway.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "SwaggerUsers": [
+    {
+      "Name": "csswireswagger",
+      "Password": "Password312"
+    },
+    {
+      "Name": "csswireswaggeradmin",
+      "Password": "Password431"
+    }
+  ],
+  "TokenExchangeSettings": {
+    "Clients": [
+      {
+        "Client_Id": "jha-css-bg-ex",
+        "Client_Secret": "{{secret:Identity-JHA-CSS-BG-EX-Client-Secret}}"
+      },
+      {
+        "Client_Id": "jha-css-ux-xp",
+        "Client_Secret": "{{secret:Identity-JHA-CSS-UX-XP-Client-Secret}}"
+      }
+    ]
+  }
+}

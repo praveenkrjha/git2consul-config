@@ -1,0 +1,5 @@
+{
+    "ServerName": "jxchange.gadev.jha-sys.com",
+    "Password": "{{secret:s998877666CSSjXchangeProvidersEL}}",
+    "UserName": "CSSDevelopment@dev.jha"
+}

@@ -1,0 +1,112 @@
+{
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "AuthorizationSetting": {
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "CacheSettings": {
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+    "DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/scheduler-service/swagger",
+      "/api/scheduler-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "Kafka": {
+    "AutoCommitIntervalMs": 500,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "SchedulerService",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "SchedulerService",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "SchedulerSettings": {
+    "OldProcessedMessage": {
+      "DeleteMessagesGreaterThanInSeconds": 300
+    },
+    "ProcessingFailed": {
+      "MinDelay": 1,
+      "Topics": [
+        {
+          "Key": "DataChangedEvent",
+          "Value": {
+            "ExponentialDelay": 2,
+            "Interval": 1,
+            "MaxRetry": 2
+          }
+        },
+        {
+          "Key": "Default",
+          "Value": {
+            "ExponentialDelay": 1,
+            "Interval": 1,
+            "MaxRetry": 10
+          }
+        }
+      ]
+    },
+    "PublishFailed": {
+      "Interval": 5,
+      "MaxRetry": 50
+    }
+  }
+}

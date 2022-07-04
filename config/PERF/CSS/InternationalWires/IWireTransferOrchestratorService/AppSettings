@@ -1,0 +1,233 @@
+{
+	"AllowedHosts": "*",
+	"ApplicationInsights": {
+		"InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+	},
+	"AuthorizationServiceBase": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/ProductId/ApplicationId/role-service",
+	"AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions",
+	"AuthorizationSetting": {
+		"AssignedToMePermissionsUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome",
+		"AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+	},
+	"AzureFileStorageURL": "{{config:CSS.AzureFileStorageURL}}",
+	"CacheSettings": {
+		"InMemoryCacheTimeout": "1000000",
+		"InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+		"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+	},
+	"CambridgeProxyServiceURLs": {
+		"BaseUrl": "{{config:CSS.CambridgeProxyServiceBase}}",
+		"CreateQuoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/quotes",
+		"GetQuoteByIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/quotes/{3}",
+		"GetBeneficiaryUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/beneficiary-core/beneficiary/{3}",
+		"RemitterUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/remitters/{3}",
+		"BookDealUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/quotes/{3}/book",
+		"BookOrderUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/book-order",
+		"CancelDealUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/cancel-deal/{3}",
+		"CancelOrderUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/cancel-order/{3}",
+		"ConfirmPaymentUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/confirmation/payment/{3}"
+	},
+	"NoteServiceUrls": {
+		"BaseUrl": "{{config:CSS.NoteDomainBase}}",
+		"GetNotesByParentIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/{3}/notes",
+		"GetNoteByIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes/{3}",
+		"AddNoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes",
+		"UpdateNoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes/{3}",
+		"DeleteNoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes/delete"
+	},
+	"EncryptionSetting": {
+		"AzureBlobName": "wdek.xml",
+		"AzureBlobStorageAccountKey": "{{secret:CSS-EK-StorageAccountKey}}",
+		"AzureBlobStorageAccountName": "{{config:CSS.EK.StorageAccountName}}",
+		"AzureBlobStorageAppName": "wire-service",
+		"AzureBlobStorageUri": "https://{{config:CSS.EK.StorageAccountName}}.blob.core.windows.net/d-wdek-1",
+		"AzureVaultClientId": "{{secret:AzKvClientId}}",
+		"AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+		"AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection",
+		"EncryptionKey": "my-very-long-key-of-no-exact-size"
+	},
+	"FIProxyServiceUrls": {
+		"BaseUrl": "{{config:CSS.FIProxyBase}}"
+	},
+	"ServiceDictionaryProxyUrls": {
+		"BaseUrl": "{{config:CSS.ServiceDictionaryProxyServiceBase}}",
+		"ServiceFeeCodeGetUrl": "/api/v1/institutions/{0}/products/{1}/{2}/service-dictionary-proxy-service/serviceFeeCode",
+		"AccountAnalysisCodeGetUrl": "/api/v1/institutions/{0}/products/{1}/{2}/service-dictionary-proxy-service/accountAnalysisCode",
+		"OfficerCodeGetUrl": "/api/v1/institutions/{0}/products/{1}/{2}/service-dictionary-proxy-service/officerCode/{3}",
+		"AvailableBalanceCalculationCodeUrl": "/api/v1/institutions/{0}/products/{1}/{2}/service-dictionary-proxy-service/availableBalanceCalculationCode"
+	},
+	"FileStorageSettings": {
+		"ConnectionString": "{{config:CSS.FileStorageConnectionString}}"
+	},
+	"HttpHeaderSetting": {
+		"HeaderExclusions": [
+			{
+				"HeaderName": "Content-Type",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Content-Length",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Transfer-Encoding",
+				"HttpMethods": [
+					"Get"
+				]
+			}
+		],
+		"HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+		"HeaderValidationExcludedURLs": [
+			"/api/iwire-transfer-orchestrator-service/swagger",
+			"/api/iwire-transfer-orchestrator-service/hc",
+			"/api/iwire-transfer-orchestrator-service/liveness",
+			"/swagger"
+		]
+	},
+	"IdentityRequest": {
+		"Acr_Values": "tenant:",
+		"Client_Id": "jha-css-bg",
+		"Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+		"Grant_Type": "password",
+		"Password": "{{secret:system1--jha-service-account-com-Password}}",
+		"UserName": "system1@jha-service-account.com"
+	},
+	"IdentitySettings": {
+		"IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+		"ValidAudiences": [
+			"jha-ux",
+			"ux-api",
+			"bg-api",
+			"bg-api-ex"
+		]
+	},
+	"Kafka": {
+		"AutoCommitIntervalMs": 5000,
+		"BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+		"Certificates": {
+			"CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+			"ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+			"ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+		},
+		"ClientId": "IWireTransferOrchestratorService.Api",
+		"DbConnection": {
+			"CollectionName": {
+				"Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+				"ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+				"PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+			},
+			"ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+			"DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+		},
+		"GroupId": "IWireTransferOrchestratorService.Api",
+		"MaxPollIntervalMs": 300000,
+		"RetrySettings": {
+			"IsRequired": true
+		}
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning",
+			"Microsoft.Hosting.Lifetime": "Information"
+		}
+	},
+	"MasterDataServiceURLs": {
+		"MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+		"OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+	},
+	"MongoDbSettings": {
+		"ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssIWireBeneficiary_user:{{secret:cssIWireBeneficiary-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+		"DatabaseName": "cssIWireBeneficiary"
+	},
+	"MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+	"PagingDefaultValue": {
+		"PageNo": "1",
+		"PageSize": "10"
+	},
+	"RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+	"SettingServiceURLs": {
+		"BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}",
+		"CurrencyURL": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/Common",
+		"GetConfiguration": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/{3}",
+		"DualControlConfigurationUrl": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/{3}"
+	},
+	"TenantConfigURL": "{{config:CSS.TenantConfigServiceUrl}}",
+	"WorkflowConfigDefaultSteps": [
+		{
+			"Order": 1,
+			"ProcessStep": "OFAC"
+		},
+		{
+			"Order": 2,
+			"ProcessStep": "DualControl"
+		}
+	],
+	"AddMemoPostEndpoint": "/api/v2/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/transactions",
+	"DeleteBulkMemoPostEndpoint": "/api/v2/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/transactions/bulk-delete",
+	"UpdateMemoPostEndpoint": "/api/v2/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/transactions",
+	"AccountProxyBaseUrl": "{{config:CSS.AccountProxyServiceBase}}",
+	"AccountFetchCount": 500,
+	"SearchWiresAccountEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/accounts?count={3}&nextOffSet={4}",
+	"WiresAccountRelationshipsEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/relationships?count={5}&nextOffSet={6}",
+	"AccountProxyEndpoints": "/api/v1/institutions/{0}/products/{1}/{2}/accounts/wire-accounts/{3}/{4}?AvailBalCalcCode={5}",
+	"AddServiceFeeTransactionEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/transactions/svc-fee",
+	"AddAccountAnalysisCounterEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/transactions/account-analysis",
+	"UserOperationInquiryEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/accounts/{3}/{4}/transactions/user-operation-inq",
+	"IWiresBeneficiaryServiceUrls": {
+		"BaseUrl": "{{config:CSS.BeneficiaryServiceBase}}",
+		"ValidateBeneficiaryUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/validatebeneficiary?beneficiaryId={3}",
+		"UpdateOfacStatusUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/internal/ofac-status",
+		"UpdateBeneficiaryUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/internal/{3}",
+		"GetBeneficiaryFirstTransferUrl": "/api/v1/institutions/{0}/products/jha-css/InternationalWires/iwire-beneficiary-service/beneficiary/{1}/firsttransfer"
+	},
+	"IWireTransferServiceUrls": {
+		"BaseUrl": "{{config:CSS.IWireTransferServiceBase}}",
+		"SaveWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/addwire",
+		"GetWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/transactions/internal/getwire/{3}",
+		"UpdateNotesExistUrl": "/api/v1/institutions/{0}/products/{1}/{2}/updateNotesExist",
+		"DeleteWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/transactions/{3}",
+		"UpdateWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/UpdateWire",
+		"CancelWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/transactions/cancel/{3}",
+		"UpdateWireStatusUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/wire-actions/UpdateWireStatus",
+		"DualControlVerifyWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/wire-actions/{3}/VerifyDualControl",
+		"DuplicateWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/DuplicateWire",
+		"PatchWireUrl": "/api/v1/institutions/{0}/products/{1}/{2}/PatchWire",
+		"GetSendAuthorizationBulkUrl": "/api/v1/institutions/{0}/products/{1}/{2}/transactions/internal/{3}/send-authorizationbulk",
+		"WorkflowVerificationUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/workflow/{3}/verify",
+		"ProcessFirstTransferStepUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/workflow/{3}/processFirstTransfer",
+		"GetWireSequenceIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/transactions/internal/getWireSequenceId/{3}"
+	},
+	"GlProxyUrls": {
+		"BaseUrl": "{{config:CSS.GLProxyServiceBase}}",
+		"GLProxyInquiryEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/gl-proxy-service/accounts/Inquiry",
+		"GLProxyUserInquiryEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/gl-proxy-service/accounts/UserInq",
+		"PostTransaction": "/api/v1/institutions/{0}/products/jha-css/{1}/gl-proxy-service/transactions",
+		"PostTransactionV2": "/api/v2/institutions/{0}/products/jha-css/{1}/gl-proxy-service/transactions"
+	},
+	"CancelWireConfiguration": {
+		"CancelExpiryTimeoutMinutes": 30,
+		"PermissionNameToCancelAfterExpiry": "CancelIntlWirePostTimeLimit",
+		"PermissionNameToCancelBeforeExpiry": "CancelIntlWire"
+	},
+	"PermissionInfoSetting": {
+		"Url": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions"
+	},
+	"RateQuoteCacheTimeoutMinutes": 30,
+	"MockPaymentData": {
+		"MockPaymentInstructionIds": [
+			2730383,
+			2730381,
+			2730382,
+			2730378
+		]
+	},
+	"AzureAppConfiguration": {
+		"ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+		"RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+	}
+}

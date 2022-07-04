@@ -1,0 +1,287 @@
+{
+	"ColumnMappingRules": {
+		"Values": {
+			"bankCountry": {
+				"Name": "ReceiveFinancialInstitutionAddress.CountryType"
+			},
+			"bankCurrency": {
+				"Name": "CurrencyType"
+			},
+			"bankName": {
+				"Name": "ReceiveFinancialInstitutionName"
+			},
+			"bankRegion": {
+				"Name": "ReceiveFinancialInstitutionAddress.StateProvince"
+			},
+			"bankCity": {
+				"Name": "ReceiveFinancialInstitutionAddress.City"
+			},
+			"bankAddressLine1": {
+				"Name": "ReceiveFinancialInstitutionAddress.Street1"
+			},
+			"bankAddressLine2": {
+				"Name": "ReceiveFinancialInstitutionAddress.Street2"
+			},
+			"bankPostal": {
+				"Name": "ReceiveFinancialInstitutionAddress.PostalCode"
+			},
+			"routingCode": {
+				"Name": "ReceiveFinancialInstitutionRoutingId"
+			},
+			"swiftBicCode": {
+				"Name": "ReceiveFinancialInstitutionBICCode"
+			},
+			"ibanDigits": {
+				"Name": "ibanDigits"
+			},
+			"accountNumber": {
+				"Name": "FinancialInstitutionId"
+			},
+			"accountHolderPhoneNumber": {
+				"Name": "ContactPhoneNumber"
+			},
+			"accountHolderName": {
+				"Name": "Name.Common"
+			},
+			"destinationCountry": {
+				"Name": "DestinationCountry"
+			},
+			"classification": {
+				"Name": "BeneficiaryType"
+			},
+			"accountHolderCountry": {
+				"Name": "Address.CountryType"
+			},
+			"accountHolderRegion": {
+				"Name": "Address.StateProvince"
+			},
+			"accountHolderAddress1": {
+				"Name": "Address.Street1"
+			},
+			"accountHolderAddress2": {
+				"Name": "Address.Street2"
+			},
+			"accountHolderCity": {
+				"Name": "Address.City"
+			},
+			"accountHolderPostal": {
+				"Name": "Address.PostalCode"
+			},
+			"accountHolderEmail": {
+				"Name": "ContactEmailAddress"
+			},
+			"preferredMethod": {
+				"Name": "PaymentMethods"
+			}
+		}
+	},
+	"ColumnMappingRegulatoryRules": {
+		"Values": {
+			"AgencyCode": {
+				"Name": "AgencyCode",
+				"ColumnName": "FinancialInstitutionBranchCode"
+			},
+			"ContactName": {
+				"Name": "ContactName",
+				"ColumnName": "ContactName"
+			},
+			"BeneficiaryAccountType": {
+				"Name": "BeneficiaryAccountType",
+				"ColumnName": "AccountType"
+			},
+			"BeneficiaryKNP": {
+				"Name": "BeneficiaryKNP",
+				"ColumnName": "PaymentCode"
+			},
+			"BeneficiaryVO": {
+				"Name": "BeneficiaryVO",
+				"ColumnName": "PaymentCode"
+			},
+			"CompanyNITID": {
+				"Name": "CompanyNITID",
+				"ColumnName": "TributaryIdentificationNumber"
+			},
+			"BeneficiaryPatronymicName": {
+				"Name": "BeneficiaryPatronymicName",
+				"ColumnName": "BeneficiaryFatherSurname"
+			},
+			"BeneficiaryCedula": {
+				"Name": "BeneficiaryCedula",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryCedulaID": {
+				"Name": "BeneficiaryCedulaID",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryCNPJ": {
+				"Name": "BeneficiaryCNPJ",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryCPF": {
+				"Name": "BeneficiaryCPF",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryCUIT": {
+				"Name": "BeneficiaryCUIT",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryINN": {
+				"Name": "BeneficiaryINN",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryRIF": {
+				"Name": "BeneficiaryRIF",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryRUT": {
+				"Name": "BeneficiaryRUT",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryTRN": {
+				"Name": "BeneficiaryTRN",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"BeneficiaryTaxID": {
+				"Name": "BeneficiaryTaxID",
+				"ColumnName": "BeneficiaryTaxID"
+			},
+			"MFOCode": {
+				"Name": "MFOCode",
+				"ColumnName": "FinancialInstitutionBranchCode"
+			},
+			"IncludeVATax": {
+				"Name": "IncludeVATax",
+				"ColumnName": "IncludeVATax"
+			},
+			"BankBranchCode": {
+				"Name": "BankBranchCode",
+				"ColumnName": "FinancialInstitutionBranchCode"
+			},
+			"BeneficiaryBankBranchName": {
+				"Name": "BeneficiaryBankBranchName",
+				"ColumnName": "BeneficiaryBankBranchName"
+			},
+			"BeneficiaryKBE": {
+				"Name": "BeneficiaryKBE",
+				"ColumnName": "BeneficiaryKBE"
+			}
+		}
+	},
+	"AllowedHosts": "*",
+	"ApplicationInsights": {
+		"InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+	},
+	"CacheSettings": {
+		"InMemoryCacheTimeout": "100000",
+		"InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+		"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+	},
+	"Kafka": {
+		"AutoCommitIntervalMs": 5000,
+		"BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+		"Certificates": {
+			"CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+			"ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+			"ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+		},
+		"ClientId": "CambridgeProxyService.Api",
+		"DbConnection": {
+			"CollectionName": {
+				"Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+				"ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+				"PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+			},
+			"ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+			"DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+		},
+		"GroupId": "CambridgeProxyService.Api",
+		"MaxPollIntervalMs": 300000,
+		"RetrySettings": {
+			"IsRequired": true
+		}
+	},
+	"CambridgeSettings": {
+		"BaseUrl": "{{config:CSS.CambridgeLinkBase}}",
+		"BackgroundJobAssertion": {
+			"AccessTokenExpirationInMins": 19,
+			"ClientCode": "252789",
+			"Issuer": "252789_API_User",
+			"PrivateKey": "{{secret:cssIWireCambridgeProxy-BackgroundJob-ClientLevel-PrivateKey}}"
+		},
+		"JwtExpirationInMins": 20,
+		"PartnerLevelAssertion": {
+			"AccessTokenExpirationInMins": 720,
+			"Issuer": "JHA",
+			"PrivateKey": "{{secret:cssIWireCambridgeProxy-PartnerLevel-PrivateKey}}"
+		},
+		"ApiUrls": {
+			"PartnerLevelAuthUrl": "/api/partner/oauth2/token",
+			"ClientLevelAuthUrl": "/api/partner/oauth2/userToken",
+			"BeneficiaryRulesUrl": "/api/{0}/0/template-guide?templateType=Bene&destinationcountry={1}&bankcountry={2}&bankCurrency={3}&classification={4}&paymentMethods={5}",
+			"CountriesUrl": "/api/{0}/0/countries",
+			"RegionsUrl": "/api/{0}/0/regions?country={1}",
+			"CitiesUrl": "/api/{0}/0/cities?country={1}",
+			"CurrencyUrl": "/api/{0}/0/payCurrencies?product=Bene",
+			"BeneficiaryTypeUrl": "/api/{0}/0/template-guide?templateType=Bene",
+			"SaveBeneficiaryUrl": "/api/{0}/0/templates/{1}",
+			"IbanValidationUrl": "/api/ibanvalidation",
+			"DeleteBeneficiaryUrl": "/api/{0}/0/templates/{1}",
+			"BankSearchUrl": "/api/banks?country={1}&query={2}&skip={3}&take={4}&sort={5}&facets={6}",
+			"PurposeOfPaymentUrl": "/api/{0}/0/paymentPurpose",
+			"CreateRateQuoteUrl": "/api/{0}/0/quotes/spot",
+			"GetRateQuoteUrl": "/api/{0}/0/new-quotes/{1}",
+			"GetBeneficiaryUrl": "/api/{0}/0/templates/{1}",
+			"RemitterUrl": "/api/{0}/0/remitters/{1}",
+			"BookDealUrl": "/api/{0}/0/quotes/{1}/book",
+			"BookOrderUrl": "/api/{0}/0/book-order",
+			"CancelDealUrl": "/api/{0}/0/orders/{1}/request-cancellation",
+			"CancelOrderUrl": "/api/{0}/0/cancel-quotes/{1}/book",
+			"ConfirmPaymentUrl": "/api/{0}/0/confirmation/payments/{1}"
+		}
+	},
+	"HttpHeaderSetting": {
+		"HeaderExclusions": [
+			{
+				"HeaderName": "Content-Type",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Content-Length",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Transfer-Encoding",
+				"HttpMethods": [
+					"Get"
+				]
+			}
+		],
+		"HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+		"HeaderValidationExcludedURLs": [
+			"/api/master-data-service/swagger",
+			"/api/master-data-service/hc",
+			"/swagger"
+		]
+	},
+	"IdentitySettings": {
+		"IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+		"ValidAudiences": [
+			"jha-ux",
+			"ux-api",
+			"bg-api",
+			"bg-api-ex"
+		]
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning",
+			"Microsoft.Hosting.Lifetime": "Information"
+		}
+	},
+	"RedisConnectionString": "{{config:CSS.RedisConnectionString}}"
+}

@@ -1,0 +1,81 @@
+{
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "CacheSettings": {
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+	"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/role-service/swagger",
+      "/api/role-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "RoleService.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "RoleService.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "MongoSettings": {
+    "Connection": {
+      "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssRolesPermissions_user:{{secret:CSSRolesPermissions-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+      "DatabaseName": "cssRolesPermissions"
+    }
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "AzureAppConfiguration": {
+    "ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+    "RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+  }
+}

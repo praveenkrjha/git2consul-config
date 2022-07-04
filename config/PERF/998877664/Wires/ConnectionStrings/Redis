@@ -1,0 +1,1 @@
+css-perf-redis.redis.cache.windows.net:6380,password={{secret:WiresConnectionStringsRedis}},ssl=True,abortConnect=False

@@ -1,0 +1,9 @@
+{
+  "EntityListTypes": ["OFAC","OFAC_SSI"],
+  "OfacSettings": {
+    "checkOfac": true,
+    "confidenceMatchPercentage": 85,
+    "automateOFACProvider": "OFACSearch",
+    "runOFACWhenAddingWire": true
+  }
+}

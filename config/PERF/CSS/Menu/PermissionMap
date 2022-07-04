@@ -1,0 +1,369 @@
+{
+    "Menus": [
+        {
+            "Name": "wiresHome",
+            "Permissions": []
+        },
+        {
+            "Name": "searchWire",
+            "Permissions": [
+                "ModifyIncomingWire",
+                "ModifyWire",
+                "ViewWire"
+            ]
+        },
+        {
+            "Name": "wire",
+            "Permissions": [
+                "AddWire",
+                "AddIncomingWire",
+                "AddIncomingNonCustomerWire"
+            ]
+        },
+        {
+            "Menus": [
+                {
+                    "Name": "searchTemplate",
+                    "Permissions": [
+                        "ViewWireTemplate"
+                    ]
+                },
+                {
+                    "Name": "addTemplate",
+                    "Permissions": [
+                        "AddWireTemplate"
+                    ]
+                },
+                {
+                    "Name": "createRecurringWire",
+                    "Permissions": [
+                        "CreateRecurringWire"
+                    ]
+                }
+            ],
+            "Name": "wireTemplate",
+            "Permissions": []
+        },
+        {
+            "Name": "consolidateWire",
+            "Permissions": []
+        },
+        {
+            "Menus": [
+                {
+                    "Name": "directlineWireTransferInquiry",
+                    "Permissions": [
+                        "CreateViewWireTransferInquiry"
+                    ]
+                },
+                {
+                    "Name": "messageStatusInquiry",
+                    "Permissions": [
+                        "MessageStatusReport"
+                    ]
+                },
+                {
+                    "Name": "directLogFile",
+                    "Permissions": [
+                        "ViewDirectLineWiresLog"
+                    ]
+                },
+                {
+                    "Name": "fgaStatus",
+                    "Permissions": []
+                },
+                {
+                    "Name": "unsolicitedInformation",
+                    "Permissions": []
+                },
+                {
+                    "Name": "metrics",
+                    "Permissions": [
+                        "ViewWireMetric"
+                    ]
+                },
+                {
+                    "Name": "restoreEOD",
+                    "Permissions": []
+                },
+                {
+                    "Name": "omadUpdate",
+                    "Permissions": []
+                }
+            ],
+            "Name": "wireActivity",
+            "Permissions": [
+                "CreateViewWireOFACActivity"
+            ]
+        },
+        {
+            "Menus": [
+                {
+                    "Name": "importIncomingFile",
+                    "Permissions": [
+                        "ImportIncomingFile"
+                    ]
+                },
+                {
+                    "Name": "createOutGoingFile",
+                    "Permissions": [
+                        "CreateOutgoingFile"
+                    ]
+                },
+                {
+                    "Name": "exportOutGoingFile",
+                    "Permissions": [
+                        "ExportOutgoingFile"
+                    ]
+                }
+            ],
+            "Name": "wireFile",
+            "Permissions": [
+                "ExportOutgoingFile",
+                "CreateOutgoingFile"
+            ]
+        },
+        {
+            "Menus": [
+                {
+                    "Name": "general",
+                    "Permissions": [
+                        "ViewWireSettings",
+                        "ModifyWireSettings"
+                    ],
+                    "Tabs": [
+                        {
+                            "Name": "common",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "dualControl",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "fees",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "recurring",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "email",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "directLine",
+                            "Permission": []
+                        }
+                    ]
+                },
+                {
+                    "Name": "companyEntitle",
+                    "Permissions": []
+                },
+                {
+                    "Menus": null,
+                    "Name": "onUsRoutingNumber",
+                    "Permissions": [
+                        "AddOnUsRoutingNumber",
+                        "ViewWireSettings"
+                    ]
+                },
+                {
+                    "Name": "accountNameAlias",
+                    "Permissions": [
+                        "ViewWireSettings",
+                        "ModifyWireSettings"
+                    ]
+                },
+                {
+                    "Name": "accountTranslation",
+                    "Permissions": [
+                        "SearchViewAuditlog"
+                    ]
+                },
+                {
+                    "Name": "transactionSettings",
+                    "Permissions": [
+                        "ViewWireSettings",
+                        "ModifyWireSettings"
+                    ],
+                    "tabs": [
+                        {
+                            "Name": "deposit",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "loans",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "generalLedger",
+                            "Permission": []
+                        },
+                        {
+                            "Name": "nonCustomer",
+                            "Permission": []
+                        }
+                    ]
+                },
+                {
+                    "Name": "largeWireLimitSettings",
+                    "Permissions": [
+                        "ViewWireSettings",
+                        "ModifyWireSettings"
+                    ]
+                },
+                {
+                    "Name": "identification",
+                    "Permissions": []
+                }
+            ],
+            "Name": "wireSettings",
+            "Permissions": [
+                "ModifyWireSettings",
+                "ViewWireSettings"
+            ]
+        },
+        {
+            "Menus": [
+                {
+                    "Name": "reports",
+                    "Permissions": [
+                        "CreateViewAccountBalance",
+                        "CreateViewCTPWires",
+                        "CreateViewDuplicateWires",
+                        "CreateViewEndpointGrandTotals",
+                        "CreateViewErrorDescription",
+                        "CreateViewFedSubsidiary",
+                        "CreateViewFinalABMSTotals",
+                        "CreateViewFundsGap",
+                        "CreateViewInterimABMSTotals",
+                        "CreateViewNonFRBOutgoingWires",
+                        "CreateViewOpenBalance",
+                        "CreateViewOther",
+                        "CreateViewPeriodicBalance",
+                        "CreateViewRecurringWireActivity",
+                        "CreateViewRecurringWireMasterList",
+                        "CreateViewRepetitiveWireTransfers",
+                        "CreateViewTerminalDetails",
+                        "CreateViewUnprocessedWire",
+                        "CreateViewWireDownload",
+                        "CreateViewWireMetrics",
+                        "CreateViewWireOFACActivity",
+                        "CreateViewWireOverride",
+                        "CreateViewWireProcessed",
+                        "CreateViewWiresCreated",
+                        "CreateViewWireSecurity",
+                        "CreateViewWiresOver",
+                        "CreateViewWireTransferAcknowledge",
+                        "CreateViewWireTransferInquiry",
+                        "CreateViewWireTransferMaintenance",
+                        "CreateViewWireUpload",
+                        "DeleteAccountBalance",
+                        "DeleteCTPWires",
+                        "DeleteDuplicateWires",
+                        "DeleteEndpointGrandTotals",
+                        "DeleteErrorDescription",
+                        "DeleteFedSubsidiary",
+                        "DeleteFinalABMSTotals",
+                        "DeleteFundsGap",
+                        "DeleteInterimABMSTotals",
+                        "DeleteNonFRBOutgoingWires",
+                        "DeleteOpenBalance",
+                        "DeleteOther",
+                        "DeletePeriodicBalance",
+                        "DeleteRecurringWireActivity",
+                        "DeleteRecurringWireMasterList",
+                        "DeleteRepetitiveWireTransfers",
+                        "DeleteTerminalDetails",
+                        "DeleteUnprocessedWire",
+                        "DeleteWireDownload",
+                        "DeleteWireMetrics",
+                        "DeleteWireOFACActivity",
+                        "DeleteWireOverride",
+                        "DeleteWireProcessed",
+                        "DeleteWiresCreated",
+                        "DeleteWireSecurity",
+                        "DeleteWiresOver",
+                        "DeleteWireTransferAcknowledge",
+                        "DeleteWireTransferInquiry",
+                        "DeleteWireTransferMaintenance",
+                        "DeleteWireUpload",
+                        "CreateViewLargeWiresDailyUsed",
+                        "DeleteLargeWiresDailyUsed"
+                    ]
+                },
+                {
+                    "Name": "wireDocuments",
+                    "Permissions": [
+                        "PrintDocuments"
+                    ]
+                }
+            ],
+            "Name": "reportManagement",
+            "Permissions": []
+        },
+        {
+            "Menus": [
+                {
+                    "Name": "auditLog",
+                    "Permissions": [
+                        "SearchViewAuditlog"
+                    ]
+                },
+                {
+                    "Name": "processEOD",
+                    "Permissions": [
+                        "ProcessEndofDay"
+                    ]
+                },
+                {
+                    "Name": "manageRoles",
+                    "Permissions": [
+                        "ViewRole"
+                    ]
+                },
+                {
+                    "Name": "managePermissions",
+                    "Permissions": [
+                        "ViewPermissionSet"
+                    ]
+                },
+                {
+                    "Name": "calendar",
+                    "Permissions": [
+                        "ViewCalendar"
+                    ]
+                },
+                {
+                    "Name": "reportsSettings",
+                    "Permissions": [
+                        "ManageReportsSettings",
+                        "ManageFoldersSettings"
+                    ]
+                },
+                {
+                    "Name": "documentTemplates",
+                    "Permissions": []
+                },
+                {
+                    "Name": "accountEmailNotices",
+                    "Permissions": [
+                        "AccountEmailNotificationSettings"
+                    ]
+                }
+            ],
+            "Name": "generalSettings",
+            "Permissions": [
+                "ModifyWireSettings",
+                "ViewWireSettings"
+            ]
+        },
+        {
+            "Name": "about",
+            "Permissions": []
+        }
+    ]
+}

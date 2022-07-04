@@ -1,0 +1,295 @@
+{
+    "attributes": [
+        {
+            "name": "FormType",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104310",
+                    "message": "Disclosure Form is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "FormType"
+        },
+        {
+            "name": "remittanceOriginatorName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104312",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceOriginatorName"
+        },
+        {
+            "name": "remittanceOriginatorAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104313",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceOriginatorAddress1"
+        },
+        {
+            "name": "remittanceOriginatorAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104314",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceOriginatorAddress2"
+        },
+        {
+            "name": "remittanceOriginatorAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104315",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceOriginatorAddress3"
+        },
+        {
+            "name": "contactType",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104316",
+                    "message": "Contact Type is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "contactType"
+        },
+        {
+            "name": "remittanceBeneficiaryName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104317",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceBeneficiaryName"
+        },
+        {
+            "name": "remittanceBeneficiaryAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104318",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceBeneficiaryAddress1"
+        },
+        {
+            "name": "remittanceBeneficiaryAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104319",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceBeneficiaryAddress2"
+        },
+        {
+            "name": "remittanceBeneficiaryAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104320",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceBeneficiaryAddress3"
+        },
+        {
+            "name": "remittanceConfirmationCode",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104321",
+                    "message": "Only alpha – numeric characters permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9 ]+$"
+                },
+                {
+                    "errorCode": "104322",
+                    "type": "maxLength",
+                    "value": "20"
+                }
+            ],
+            "value": "remittanceConfirmationCode"
+        },
+        {
+            "name": "remittancePickupInformationName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104323",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittancePickupInformationName"
+        },
+        {
+            "name": "remittancePickupInformationAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104324",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittancePickupInformationAddress1"
+        },
+        {
+            "name": "remittancePickupInformationAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104325",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittancePickupInformationAddress2"
+        },
+        {
+            "name": "remittancePickupInformationAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104326",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittancePickupInformationAddress3"
+        },
+        {
+            "name": "FundSource",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104327",
+                    "message": "Business Function Code is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "FundSource"
+        },
+        {
+            "name": "phoneNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104311",
+                    "message": "The *,¦,^,{,[,},],| and ¢ characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104328",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "phoneNumber"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "AuthorizationServiceBase": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/ProductId/ApplicationId/role-service",
+  "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions",
+  "AuthorizationSetting": {
+    "AssignedToMePermissionsUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome",
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "AzureFileStorageURL": "{{config:CSS.AzureFileStorageURL}}",
+  "CacheSettings": {
+    "InMemoryCacheTimeout": "1000000",
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}"
+  },
+  "CambridgeProxyServiceURLs": {
+    "BaseUrl": "{{config:CSS.CambridgeProxyServiceBase}}",
+    "CreateQuoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/quotes",
+    "GetQuoteByIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/quotes/{3}"
+  },
+  "EncryptionSetting": {
+    "AzureBlobName": "wdek.xml",
+    "AzureBlobStorageAccountKey": "{{secret:CSS-EK-StorageAccountKey}}",
+    "AzureBlobStorageAccountName": "{{config:CSS.EK.StorageAccountName}}",
+    "AzureBlobStorageAppName": "wire-service",
+    "AzureBlobStorageUri": "https://{{config:CSS.EK.StorageAccountName}}.blob.core.windows.net/d-wdek-1",
+    "AzureVaultClientId": "{{secret:AzKvClientId}}",
+    "AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+    "AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection",
+    "EncryptionKey": "my-very-long-key-of-no-exact-size"
+  },
+  "FileStorageSettings": {
+    "ConnectionString": "{{config:CSS.FileStorageConnectionString}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/incoming-wire-service/swagger",
+      "/api/incoming-wire-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentityRequest": {
+    "Acr_Values": "tenant:",
+    "Client_Id": "jha-css-bg",
+    "Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+    "Grant_Type": "password",
+    "Password": "{{secret:system1--jha-service-account-com-Password}}",
+    "UserName": "system1@jha-service-account.com"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "IncomingWireService.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "IncomingWireService.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "MongoDbSettings": {
+    "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssIWireBeneficiary_user:{{secret:cssIWireBeneficiary-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+    "DatabaseName": "cssIWireBeneficiary"
+  },
+  "PagingDefaultValue": {
+    "PageNo": "1",
+    "PageSize": "10"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "TenantConfigURL": "{{config:CSS.TenantConfigServiceUrl}}"
+}

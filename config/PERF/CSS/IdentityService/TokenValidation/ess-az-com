@@ -1,0 +1,10 @@
+[
+    {
+        "Issuer": "http://jx-alpha.ess-az.com/adfs/services/trust",
+        "SigningCert": "{{secret:CSS-IdentityService-TokenValidation-ees-az-com}}"
+    },
+    {
+        "Issuer": "http://jx-alpha.ess-az.com/FedlineSalesDemo",
+        "SigningCert": "{{secret:CSS-IdentityService-TokenValidation-ees-az-com-FedlineSalesDemo}}"
+    }
+]

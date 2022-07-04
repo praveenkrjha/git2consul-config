@@ -1,0 +1,115 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "activateFedBalanceWarning": {
+            "type": "boolean"
+        },
+        "dollarAmount": {
+            "type": "string"
+        },
+        "extnOverideNormalTime": {
+            "enum": [
+                "None",
+                "Incoming",
+                "Outgoing",
+                "Both"
+            ],
+            "type": "string"
+        },
+        "fedBalanceWarning": {
+            "type": "string"
+        },
+        "fgaReceiving": {
+            "type": "boolean"
+        },
+        "frbOperatingHours": {
+            "additionalItems": false,
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "frbClosingTime": {
+                        "type": "string"
+                    },
+                    "frbExtensionTime": {
+                        "type": "string"
+                    },
+                    "frbOpeningTime": {
+                        "type": "string"
+                    },
+                    "wireType": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "wireType",
+                    "frbClosingTime",
+                    "frbExtensionTime",
+                    "frbOpeningTime"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "operatingStatus": {
+            "enum": [
+                "Online",
+                "Offline",
+                "Certify",
+                "Testing"
+            ],
+            "type": "string"
+        },
+        "resend": {
+            "type": "boolean"
+        },
+        "servMsgDual": {
+            "enum": [
+                "All",
+                "DrawdownsOnly",
+                "None"
+            ],
+            "type": "string"
+        },
+        "servMsgDualFor": {
+            "enum": [
+                "None",
+                "Incoming",
+                "Outgoing",
+                "Both"
+            ],
+            "type": "string"
+        },
+        "waitBeforeTimeout": {
+            "type": "boolean"
+        },
+        "wireIntiation": {
+            "additionalItems": false,
+            "items": {
+                "enum": [
+                    "FinancialInstitution",
+                    "Internet",
+                    "ThirdParty",
+                    "TreasuryManagement"
+                ],
+                "type": "string"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "wireIntiation",
+        "operatingStatus",
+        "servMsgDual",
+        "resend",
+        "servMsgDualFor",
+        "fgaReceiving",
+        "dollarAmount",
+        "waitBeforeTimeout",
+        "fedBalanceWarning",
+        "activateFedBalanceWarning",
+        "extnOverideNormalTime",
+        "frbOperatingHours"
+    ],
+    "type": "object"
+}

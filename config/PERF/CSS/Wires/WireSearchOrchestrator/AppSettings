@@ -1,0 +1,119 @@
+{
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "AuthorizationSetting": {
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "CacheSettings": {
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+	"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/wire-search-orchestrator-service/swagger",
+      "/api/wire-search-orchestrator-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentityRequest": {
+    "Acr_Values": "tenant:",
+    "Client_Id": "jha-css-bg",
+    "Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+    "Grant_Type": "password",
+    "Password": "{{secret:system1--jha-service-account-com-Password}}",
+    "UserName": "system1@jha-service-account.com"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "IncomingWireDomainServiceUrls": {
+    "BaseUrl": "{{config:CSS.IncomingWireDomainBase}}"
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "WireSearchOrchestrator.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "WireSearchOrchestrator.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "OutgoingWireDomainServiceUrls": {
+    "BaseUrl": "{{config:CSS.WiresDomainBase}}"
+  },
+  "PagingDefaultValue": {
+    "NextOffset": "1",
+    "Results": "10"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "WireSearchServiceUrls": {
+    "BaseUrl": "{{config:CSS.WireSearchDomainBase}}"
+  },
+  "WireWorkFlowOrchestratorUrl": {
+    "BaseUrl": "{{config:CSS.WireWorkflowOrchestratorBase}}"
+  },
+   "FileStorageSettings": {
+    "ConnectionString": "{{config:CSS.ReportsFileStorageConnectionString}}"
+  },
+    "MasterDataServiceURLs": {
+    "MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+    "OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+  },
+  "TenantConfigService": {
+    "BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}"
+  },
+  "FIProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.FIProxyBase}}"
+  }
+}

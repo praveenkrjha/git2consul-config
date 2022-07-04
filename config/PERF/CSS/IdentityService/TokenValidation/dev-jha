@@ -1,0 +1,18 @@
+[
+    {
+        "Issuer": "http://jXchange-jxchangeGA-development.dev.jha/adfs/services/trust",
+        "SigningCert": "{{secret:CSS-IdentityService-TokenValidation-dev-jha}}"
+    },
+    {
+        "Issuer": "http://Xperience-jxchangeGA-development.dev.jha/adfs/services/trust",
+        "SigningCert": "{{secret:CSS-IdentityService-TokenValidation-dev-jha}}"
+    },
+    {
+        "Issuer": "http://xperience.GaDev.jha-sys.com/adfs/services/trust",
+        "SigningCert": "{{secret:CSS-IdentityService-TokenValidation-dev-jha-2}}"
+    },
+    {
+        "Issuer": "http://Xperience.Alpha.jha-sys.com/adfs/services/trust",
+        "SigningCert": "{{secret:CSS-IdentityService-TokenValidation-dev-jha-xperience-alpha-jha-sys-com}}"
+    }
+]

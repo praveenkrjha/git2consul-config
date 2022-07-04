@@ -1,0 +1,1 @@
+mongodb+srv://root:{{secret:Common-Mongo-password}}@{{config:CSS.Mongo.HostNames}}/admin?retryWrites=true&w=majority

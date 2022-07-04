@@ -1,0 +1,1 @@
+DefaultEndpointsProtocol=https;AccountName=cssperfwiresdocuments;AccountKey={{secret:CSS-DocumentMerge-StoragePassword}};EndpointSuffix=core.windows.net

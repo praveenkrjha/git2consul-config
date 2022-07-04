@@ -1,0 +1,8 @@
+{
+    "CambridgeSettlement": {
+        "AccountId": "INCOMING9663",
+        "Currency": "USD",
+        "DeliveryMethod": "W",
+        "Purpose": "Spot"
+    }
+}

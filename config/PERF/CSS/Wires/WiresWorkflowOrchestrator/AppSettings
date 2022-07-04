@@ -1,0 +1,134 @@
+{
+  "AccountProxy": {
+    "BaseUrl": "{{config:CSS.AccountProxyServiceBase}}"
+  },
+  "AccountProxyBaseUrl": "{{config:CSS.AccountProxyServiceBase}}",
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "PermissionInfoSetting": {
+    "Url": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions"
+  },
+  "AuthorizationSetting": {
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "CacheSettings": {
+    "CacheDualControlConfigurations": false,
+    "CacheInitiateConfigurations": false,
+    "CacheOfacConfigurations": false,
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+	"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "DLWProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.DLWProxyBase}}"
+  },
+  "GlProxyUrls": {
+    "BaseUrl": "{{config:CSS.GLProxyServiceBase}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/wire-workflow-orchestrator-service/swagger",
+      "/api/wire-workflow-orchestrator-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentityRequest": {
+    "Acr_Values": "tenant:",
+    "Client_Id": "jha-css-bg",
+    "Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+    "Grant_Type": "password",
+    "Password": "{{secret:system1--jha-service-account-com-Password}}",
+    "UserName": "system1@jha-service-account.com"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+   "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+   "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "WiresWorkflowOrchestrator.Api",
+    "GroupId": "WiresWorkflowOrchestrator.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "AutoCommitIntervalMs": 5000,
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "MasterDataServiceURLs": {
+    "OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+  },
+  "OfacProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.OfacProxyBase}}"
+  },
+  "PagingDefaultValue": {
+    "PageNo": "1",
+    "PageSize": "10"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "TenantConfigURL": "{{config:CSS.TenantConfigServiceUrl}}",
+  "WiresDomainServiceUrls": {
+    "BaseUrl": "{{config:CSS.WiresDomainBase}}"
+  },
+  "AzureAppConfiguration": {
+    "ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+    "RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+  },
+  "WorkflowConfigDefaultSteps": [
+    {
+      "Order": 1,
+      "ProcessStep": "OFAC"
+    },
+    {
+      "Order": 2,
+      "ProcessStep": "DualControl"
+    }
+  ]
+}

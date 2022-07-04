@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "ConfigValue": {
+            "properties": {
+                "generalLedgerIncomingWire": {
+                    "items": [
+                        {
+                            "properties": {
+                                "accountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "activeWireSource": {
+                                    "type": "boolean"
+                                },
+                                "providerAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "providerAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "providerAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerTransactionCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCodeDescription": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "wireSourceCode",
+                                "wireSourceCodeDescription",
+                                "accountTransactionCode",
+                                "providerAccountBranchNumber",
+                                "providerAccountAccountNumber",
+                                "providerTransactionCode",
+                                "activeWireSource"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "generalLedgerOutgoingWire": {
+                    "items": [
+                        {
+                            "properties": {
+                                "accountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "activeWireSource": {
+                                    "type": "boolean"
+                                },
+                                "providerAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "providerAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "providerAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerTransactionCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCodeDescription": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "wireSourceCode",
+                                "wireSourceCodeDescription",
+                                "accountTransactionCode",
+                                "providerAccountBranchNumber",
+                                "providerAccountAccountNumber",
+                                "providerTransactionCode",
+                                "activeWireSource"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "generalLedgerOutgoingWire",
+                "generalLedgerIncomingWire"
+            ],
+            "type": "object"
+        }
+    },
+    "type": "object"
+}

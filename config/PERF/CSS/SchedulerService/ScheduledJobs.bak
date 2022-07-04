@@ -1,0 +1,18 @@
+[
+    {
+        "Schedule": "0 */1 * * *",
+        "UniqueName": "ProcessingFailed"
+    },
+    {
+        "Schedule": "*/5 6-20 * * *",
+        "UniqueName": "PublishFailed"
+    },
+    {
+        "Schedule": "0 */2 * * *",
+        "UniqueName": "OldProcessedMessageCleanup"
+    },
+    {
+        "Schedule": "0 6 * * 1-5",
+        "UniqueName": "ScheduleNextDateUpdateForRecurWires"
+    }
+]

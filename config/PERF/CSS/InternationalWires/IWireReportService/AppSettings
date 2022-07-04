@@ -1,0 +1,421 @@
+{
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "AuthorizationServiceBase": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/ProductId/ApplicationId/role-service",
+  "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions",
+  "AuthorizationSetting": {
+    "BaseUrl": "{{config:CSS.AuthorizationServiceBase}}",
+    "AssignedToMePermissionsUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome",
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "AzureFileStorageURL": "{{config:CSS.AzureFileStorageURL}}",
+  "CacheSettings": {
+    "InMemoryCacheTimeout": "1000000",
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+    "DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "EncryptionSetting": {
+    "AzureBlobName": "wdek.xml",
+    "AzureBlobStorageAccountKey": "{{secret:CSS-Reports-File-Storage-Password}}",
+    "AzureBlobStorageAccountName": "{{config:CSS.CSS-Reports-File-Storage-Account-Name}}",
+    "AzureBlobStorageAppName": "wire-service",
+    "AzureBlobStorageUri": "https://{{config:CSS.CSS-Reports-File-Storage-Account-Name}}.blob.core.windows.net/d-wdek-1",
+    "AzureVaultClientId": "{{secret:AzKvClientId}}",
+    "AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+    "AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection",
+    "EncryptionKey": "my-very-long-key-of-no-exact-size"
+  },
+  "AzureAppConfiguration": {
+    "ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+    "RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+  },
+  "FileStorageSettings": {
+    "ConnectionString": "{{config:CSS.ReportsFileStorageConnectionString}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/iwire-reporting-service/hc",
+      "/api/iwire-reporting-service/liveness",
+      "/swagger"
+    ]
+  },
+  "IdentityRequest": {
+    "Acr_Values": "tenant:",
+    "Client_Id": "jha-css-bg",
+    "Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+    "Grant_Type": "password",
+    "Password": "{{secret:system1--jha-service-account-com-Password}}",
+    "UserName": "system1@jha-service-account.com"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "InternationalWireReporting.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "InternationalWireReporting.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "MasterDataServiceURLs": {
+    "MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+    "OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+  },
+  "MongoDbSettings": {
+    "Connection": {
+      "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssIWireReports_user:{{secret:cssIWireReports-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+      "IwireDatabaseName": "cssIWireReports"
+    }
+  },
+  "PagingDefaultValue": {
+    "PageNo": "1",
+    "PageSize": "10"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "ReportBaseFolder": "/Reports",
+  "DefaultReportPurgeAfterDays": "15",
+  "EODBackupPurgeAfterDays": "{{config:CSS.EODBackupPurgeAfterDays}}",
+  "SettingServiceURLs": {
+    "BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}",
+    "ProductConfigurationUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/{1}",
+    "BusinessDayUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/business-day",
+    "DualControlConfigurationUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/{1}",
+    "OfacSettingsUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/common/subsections/ofacconfiguration",
+    "CommonDetailsSettingsUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/common/subsections/detailsconfiguration",
+	"WorkflowSettingsUrl": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/helper/workflow-settings"
+  },
+  "TenantConfigService": {
+    "OnUsRoutingUrl": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/onus-routing/all",
+    "BusinessDayUrl": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/business-day",
+    "YearCalendar": "/api/v1/institutions/{0}/products/{1}/Wires/setting-service/calendar/{2}",
+    "GetConfigEndpoint": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/configurations/{3}",
+    "MemoryCacheExpirationMilliseconds": 300000,
+    "Url": "{{config:CSS.TenantConfigServiceUrl}}"
+  },
+  "MetricServiceUrls": {
+    "BaseUrl": "{{config:CSS.MetricServiceBase}}",
+    "SearchUrl": "/api/v1/institutions/{0}/products/{1}/{2}/intl-metric-service/search"
+  },
+  "MetricsTemplatesPath": {
+    "MetricsTemplate": "Infrastructure//Templates//MetricsPrint//en-US.docx"
+  },
+  "IWireBeneficiaryServiceUrls": {
+    "BaseUrl": "{{config:CSS.BeneficiaryServiceBase}}",
+    "GetBeneficiaryRulesUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/rules"
+  },
+  "ReportTemplatesPath": {
+    "WireLogFileTemplate": "Infrastructure//Templates//WireLogFile//en-US.docx"
+  },
+  "FIProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.FIProxyBase}}",
+    "GetInfoUrl": "/api/v1/institutions/{0}/products/jha-css/{1}/fi-proxy-service/fi/info"
+  },
+  "IWireTransferServiceUrls": {
+    "BaseUrl": "{{config:CSS.IWireTransferServiceBase}}",
+    "IWireTransactionSearchUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/internal/transactions-search?sort={3}&offset={4}&count={5}"
+  },
+  "IWireTransferOrchestratorServiceUrls": {
+    "BaseUrl": "{{config:CSS.IWireTransferOrchestratorServiceBase}}",
+    "OfficerCodeAccountTypeSearchUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-orchestrator-service/wire-service-dictionary/officerCode/{3}"
+  },
+  "MaxRecordCount": 10000,
+  "ColumnMappingRules": {
+    "Values": {
+      "originatorAmount.value": {
+        "Name": "Originator Amount"
+      },
+      "amount.value": {
+        "Name": "Amount"
+      },
+      "beneficiaryAmount.value": {
+        "Name": "Beneficiary Amount"
+      },
+      "feeExchangeAmount": {
+        "Name": "Fee Exchange Amount"
+      },
+      "contactPhoneNumber": {
+        "Name": "Contact Phone Number"
+      },
+      "beneficiaryName.common": {
+        "Name": "Beneficiary Name"
+      },
+      "beneficiaryAddress.countryTypeText": {
+        "Name": "Beneficiary Country"
+      },
+      "beneficiaryAddress.City": {
+        "Name": "Beneficiary City"
+      },
+      "beneficiaryAddress.street1": {
+        "Name": "Beneficiary Street 1"
+      },
+      "beneficiaryAddress.street2": {
+        "Name": "Beneficiary Street 2"
+      },
+      "feeType": {
+        "Name": "Fee Type"
+      },
+      "fee": {
+        "Name": "Fee"
+      },
+      "officerCode": {
+        "Name": "Officer Code"
+      },
+      "feeExchangeRate": {
+        "Name": "Fee Exchange Rate"
+      },
+      "accountType": {
+        "Name": "Account Type"
+      },
+      "branchCode": {
+        "Name": "Branch Code"
+      },
+      "generalLedgerCostCenter": {
+        "Name": "Cost Center"
+      },
+      "generalLedgerProductCode": {
+        "Name": "Product Code"
+      },
+      "originatorName.common": {
+        "Name": "Originator Name"
+      },
+      "originatorFinancialInstitutionName": {
+        "Name": "Financial Institution Name"
+      },
+      "customerName.common": {
+        "Name": "Customer Name"
+      },
+      "wireInPersonType": {
+        "Name": "Person Type"
+      },
+      "aliasName": {
+        "Name": "Alias Name"
+      },
+      "originatorAddress.City": {
+        "Name": "Originator City"
+      },
+      "originatorAddress.street1": {
+        "Name": "Originator Street 1"
+      },
+      "originatorAddress.street2": {
+        "Name": "Originator Street 2"
+      },
+      "alternateCustomerName": {
+        "Name": "Alternate Customer Name"
+      },
+      "accountAnalysisTransactionCode": {
+        "Name": "Transaction Code"
+      },
+      "countryCallingCode": {
+        "Name": "Country Calling Code"
+      },
+      "beneficiaryFinancialInstitutionName": {
+        "Name": "Beneficiary Financial Institution Name"
+      },
+      "receiveFinancialInstitutionBICCode": {
+        "Name": "Financial Institution BIC Code"
+      },
+      "beneficiaryFinancialInstitutionAddress.City": {
+        "Name": "Beneficiary Financial Institution City"
+      },
+      "beneficiaryFinancialInstitutionAddress.street1": {
+        "Name": "Beneficiary Financial Institution Street 1"
+      },
+      "beneficiaryFinancialInstitutionAddress.street2": {
+        "Name": "Beneficiary Financial Institution Street 2"
+      },
+      "orderNumber": {
+        "Name": "Order Number"
+      },
+      "transferDate": {
+        "Name": "Transfer Date"
+      },
+      "paymentConfirmation.TransactionReferenceNumber": {
+        "Name": "Transaction Reference Number"
+      },
+      "paymentConfirmation.ConfirmationDate": {
+        "Name": "Confirmation Date"
+      },
+      "transactionDescription": {
+        "Name": "Transaction Description"
+      },
+      "currencyExchangeRate": {
+        "Name": "Currency Exchange Rate"
+      },
+      "businessCategory": {
+        "Name": "Business Category"
+      },
+      "paymentMethod": {
+        "Name": "Payment Method"
+      },
+      "beneficiaryType": {
+        "Name": "Beneficiary Type"
+      },
+      "notesExist": {
+        "Name": "Notes Exist"
+      },
+      "beneficiaryStatus": {
+        "Name": "Beneficiary Status"
+      },
+      "ofacStatusState": {
+        "Name": "OFACStatus State"
+      },
+      "paymentPurpose.displayValue": {
+        "Name": "Payment Purpose"
+      },
+      "duplicateWireOverride": {
+        "Name": "Duplicate Wire Override"
+      },
+      "identificationNumber": {
+        "Name": "Identification Number"
+      },
+      "officerCode.displayValue": {
+        "Name": "Officer Code"
+      },
+      "alternateAccountId": {
+        "Name": "Alternate Account Id"
+      },
+      "financialInstitutionId": {
+        "Name": "Financial Institution Id"
+      },
+      "beneficiaryAmount.currencyType.displayValue": {
+        "Name": "Beneficiary Currency Type"
+      },
+      "beneficiaryAddress.stateProvince": {
+        "Name": "Beneficiary State Province"
+      },
+      "beneficiaryAddress.countryType.displayValue": {
+        "Name": "Beneficiary Country Type"
+      },
+      "beneficiaryAddress.postalCode": {
+        "Name": "Beneficiary Postal Code"
+      },
+      "beneficiaryOFACStatusState": {
+        "Name": "Beneficiary OFAC Status State"
+      },
+      "beneficiaryFinancialInstitutionRoutingId": {
+        "Name": "Beneficiary Financial Institution Routing Id"
+      },
+      "beneficiaryFinancialInstitutionAddress.stateProvince": {
+        "Name": "Beneficiary Institution State Province"
+      },
+      "beneficiaryFinancialInstitutionAddress.countryType.displayValue": {
+        "Name": "Beneficiary Institution Country Type"
+      },
+      "beneficiaryFinancialInstitutionAddress.postalCode": {
+        "Name": "Beneficiary Institution Postal Code"
+      },
+      "paymentNotificationEmailAddresses": {
+        "Name": "Payment Notification Email Addresses"
+      },
+      "regulations.BankBranchCode": {
+        "Name": "Regulatory Bank Branch Code"
+      },
+      "originatorAddress.stateProvince": {
+        "Name": "Originator State Province"
+      },
+      "originatorAddress.countryType.displayValue": {
+        "Name": "Originator Country Type"
+      },
+      "originatorAddress.postalCode": {
+        "Name": "Originator Postal Code"
+      },
+      "noticeTypes": {
+        "Name": "Notice types"
+      },
+      "regulations.BeneficiaryBankBranchName": {
+        "Name": "Regulatory Bank Branch Name"
+      },
+      "originatorType": {
+        "Name": "Originator Type"
+      },
+      "accountId": {
+        "Name": "Account Id"
+      },
+      "alternateAccountType.displayValue": {
+        "Name": "Alternate Account Type"
+      },
+      "alternateCustomerName.common": {
+        "Name": "Alternate Customer Name"
+      },
+      "taxId": {
+        "Name": "Tax Id"
+      },
+      "feeType.displayValue": {
+        "Name": "Fee Type"
+      },
+      "identificationType.displayValue": {
+        "Name": "Identification Type"
+      },
+      "accountType.displayValue": {
+        "Name": "Account Type"
+      },
+      "regulations.AgencyCode": {
+        "Name": "Regulation Agency Code"
+      },
+      "regulations.ContactName": {
+        "Name": "Regulation Contact Name"
+      },
+      "regulations.BeneficiaryCNPJ": {
+        "Name": "Regulation Beneficiary CNPJ"
+      },
+      "amount.currencyTypedisplayValue": {
+        "Name" :  "Currency Type"
+      }
+
+
+    }
+  }
+}

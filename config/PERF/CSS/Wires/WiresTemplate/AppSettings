@@ -1,0 +1,152 @@
+{
+  "AbaServiceUrls": {
+    "BaseUrl": "{{config:CSS.ABAServiceBase}}",
+    "GetAbaDetailsUrl": "/api/v1/fed-wire-aba/value/{0}"
+  },
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "AuthorizationSetting": {
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "AzureFileStorageURL": "{{config:CSS.AzureFileStorageURL}}",
+  "CacheSettings": {
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+	"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "EncryptionSetting": {
+    "AzureBlobName": "wdek.xml",
+    "AzureBlobStorageAccountKey": "{{secret:CSS-Reports-File-Storage-Password}}",
+    "AzureBlobStorageAccountName": "{{config:CSS.CSS-Reports-File-Storage-Account-Name}}",
+    "AzureBlobStorageAppName": "wire-template-service",
+    "AzureBlobStorageUri": "https://{{config:CSS.CSS-Reports-File-Storage-Account-Name}}.blob.core.windows.net/d-wdek-1",
+    "AzureVaultClientId": "{{secret:AzKvClientId}}",
+    "AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+    "AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection",
+    "EncryptionKey": "my-very-long-key-of-no-exact-size"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/wire-template-service/swagger",
+      "/api/wire-template-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentityRequest": {
+    "Acr_Values": "tenant:",
+    "Client_Id": "jha-css-bg",
+    "Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+    "Grant_Type": "password",
+    "Password": "{{secret:system1--jha-service-account-com-Password}}",
+    "UserName": "system1@jha-service-account.com"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "WireTemplateService.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "WireTemplateService.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": false
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "MasterDataServiceURLs": {
+    "MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+    "OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+  },
+  "MongoSettings": {
+    "Connection": {
+      "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssWiresTemplate_user:{{secret:CSSWiresTemplate-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+      "DatabaseName": "cssWiresTemplate"
+    }
+  },
+  "MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+  "PagingDefaultValue": {
+    "PageNo": "1",
+    "PageSize": "10"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "SettingServiceUrls": {
+    "BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}"
+  },
+  "SettingsPathMapping": [
+    {
+      "Key": "OfacSettings",
+      "Path": "{Institution}.Wires.TenantConfig.OfacSettings"
+    },
+    {
+      "Key": "Settings",
+      "Path": "{Institution}.Wires.TenantConfig.Settings"
+    },
+    {
+      "Key": "FRBSettings",
+      "Path": "CSS.FRBSettings"
+    }
+  ],
+  "EODBackupPurgeAfterDays": "{{config:CSS.EODBackupPurgeAfterDays}}",
+  "BulkWritePageSize": "{{config:CSS.Mongo.BulkWritePageSize}}",
+  "ServiceDictionaryProxyBaseUrl": "{{config:CSS.ServiceDictionaryProxyServiceBase}}",
+  "MaxRecordCount": 10000,
+  "FileStorageSettings": {
+    "ConnectionString": "{{config:CSS.ReportsFileStorageConnectionString}}"
+  },
+  "AzureAppConfiguration": {
+    "ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+    "RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+  },
+  "FIProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.FIProxyBase}}"
+  }
+}

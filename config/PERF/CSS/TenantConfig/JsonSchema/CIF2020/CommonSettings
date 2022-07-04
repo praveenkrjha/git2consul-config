@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "accountConfiguration": {
+      "type": "object",
+      "properties": {
+        "accountTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+			"enum": ["Deposit","Savings","ChristmasClub","TimeDeposit","GeneralLedger","Loan"]
+          },
+          "additionalItems": false
+        },
+        "allowedRelationships": {
+          "type": "array",
+          "items": {
+            "type": "string",
+			"enum": ["P"]
+          },
+          "additionalItems": false
+        },
+        "availableBalanceCalculationCode": {
+          "type": "string"
+        },
+        "defaultBalanceType": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "accountType": {
+                "type": "string",
+				"enum": ["Deposit","Savings","ChristmasClub","TimeDeposit","GeneralLedger","Loan"]
+              },
+              "balanceType": {
+                "type": "string",
+                "enum": ["Available", "Collected", "Current", "None"]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "accountType",
+              "balanceType"
+            ]
+          },
+          "additionalItems": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "accountTypes",
+        "allowedRelationships",
+        "availableBalanceCalculationCode",
+        "defaultBalanceType"
+      ]
+    },
+    "detailsConfiguration": {
+      "type": "object",
+      "properties": {
+        "memoPostTransactions": {
+          "type": "string"
+        },
+        "pwMemoPost": {
+          "type": "boolean"
+        },
+        "userRequestCorrelation": {
+          "type": "string"
+        },
+        "inputSource": {
+          "type": "string"
+        },
+        "userCompareInititateAuthorization": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "memoPostTransactions",
+        "pwMemoPost",
+        "userRequestCorrelation",
+        "inputSource",
+        "userCompareInititateAuthorization"
+      ]
+    },
+    "outgoingWiresConfiguration": {
+      "type": "object",
+      "properties": {
+        "autoInitiateWireAmount": {
+          "type": "string"
+        },
+        "autoInitiateRecurringWireAmount": {
+          "type": "string"
+        },
+        "initiateAfterCutoffTime": {
+          "type": "boolean"
+        },
+        "outgoingWireRoleLimits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "role": {
+                "type": "string"
+              },
+              "initiateWire": {
+                "type": "boolean"
+              },
+              "userLimitPerWire": {
+                "type": "string"
+              },
+              "userLimitPerDay": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "role",
+              "initiateWire",
+              "userLimitPerWire",
+              "userLimitPerDay"
+            ]
+          },
+          "additionalItems": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "autoInitiateWireAmount",
+        "autoInitiateRecurringWireAmount",
+        "initiateAfterCutoffTime",
+        "outgoingWireRoleLimits"
+      ]
+    },
+    "cutOffTimesConfiguration": {
+      "type": "object",
+      "properties": {
+        "timeZone": {
+          "type": "string"
+        },
+        "frbCutofTim": {
+          "type": "string"
+        },
+        "wireCutoffTime": {
+          "type": "string"
+        },
+        "returnWiresCutoffTime": {
+          "type": "string"
+        },
+        "internetWires": {
+          "type": "string"
+        },
+        "treasuryManagementWires": {
+          "type": "string"
+        },
+        "thirdPartyWires": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "wireCutoffTime",
+        "returnWiresCutoffTime",
+        "internetWires",
+        "treasuryManagementWires",
+        "thirdPartyWires"
+      ]
+    },
+    "ofacConfiguration": {
+      "type": "object",
+      "properties": {
+        "checkOFAC": {
+          "type": "boolean"
+        },
+        "confidenceMatchPercentage": {
+          "type": "number"
+        },
+        "runOFAC": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "checkOFAC",
+        "confidenceMatchPercentage",
+        "runOFAC"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "accountConfiguration",
+    "detailsConfiguration",
+    "outgoingWiresConfiguration",
+    "cutOffTimesConfiguration",
+    "ofacConfiguration"
+  ]
+}

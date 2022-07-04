@@ -1,0 +1,96 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "accountConfiguration": {
+            "properties": {
+                "accountTypes": {
+                    "items": [
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "minItems": 1,
+                    "type": "array",
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "accountTypes"
+            ],
+            "type": "object"
+        },
+        "detailsConfiguration": {
+            "properties": {
+                "availableCurrencies": {
+                    "items": [
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "minItems": 1,
+                    "type": "array",
+                    "uniqueItems": true
+                },
+                "userCompareSendAuthorization": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "availableCurrencies",
+                "userCompareSendAuthorization"
+            ],
+            "type": "object"
+        },
+        "ofacConfiguration": {
+            "properties": {
+                "IntlCheckOFAC": {
+                    "type": "boolean"
+                },
+                "IntlConfidenceMatchPercentage": {
+                    "type": "number"
+                },
+                "IntlRunOFACWhenAddingBeneficiary": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "IntlCheckOFAC",
+                "IntlConfidenceMatchPercentage",
+                "IntlRunOFACWhenAddingBeneficiary"
+            ],
+            "type": "object"
+        },
+        "roleLimitsConfiguration": {
+            "items": {
+                "properties": {
+                    "role": {
+                        "type": "string"
+                    },
+                    "sendWire": {
+                        "type": "boolean"
+                    },
+                    "userLimitPerDay": {
+                        "type": "number"
+                    },
+                    "userLimitPerWire": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "role",
+                    "sendWire",
+                    "userLimitPerDay",
+                    "userLimitPerWire"
+                ]
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "detailsConfiguration",
+        "ofacConfiguration",
+        "accountConfiguration",
+        "roleLimitsConfiguration"
+    ],
+    "type": "object"
+}

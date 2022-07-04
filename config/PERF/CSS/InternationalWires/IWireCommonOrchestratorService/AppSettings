@@ -1,0 +1,180 @@
+{
+  "AllowedHosts": "*",
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "AuthorizationServiceBase": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/ProductId/ApplicationId/role-service",
+  "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions",
+  "AuthorizationSetting": {
+    "AssignedToMePermissionsUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome",
+    "AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+  },
+  "AzureFileStorageURL": "{{config:CSS.AzureFileStorageURL}}",
+  "CacheSettings": {
+    "InMemoryCacheTimeout": "1000000",
+    "InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+    "DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+  },
+  "CambridgeProxyServiceURLs": {
+    "BaseUrl": "{{config:CSS.CambridgeProxyServiceBase}}",
+    "RegionsByCountryUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/regions",
+    "CurrencyUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/currencies",
+    "BeneficiaryTypeUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/beneficiary-type",
+    "BeneficiaryRulesUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/beneficiary-rules",
+    "SaveBeneficiaryUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/beneficiary",
+    "IbanValidationUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/iban-validation",
+    "BankSearchUrl": "/api/v1/institutions/{0}/products/jha-css/internationalwires/cambridgelink-proxy-service/bank-search"
+  },
+  "NoteServiceUrls": {
+    "BaseUrl": "{{config:CSS.NoteDomainBase}}",
+    "GetNotesByParentIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/{3}/notes",
+    "GetNoteByIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes/{3}",
+    "AddNoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes",
+    "UpdateNoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes/{3}",
+    "DeleteNoteUrl": "/api/v1/institutions/{0}/products/{1}/{2}/note-service/notes/delete"
+  },
+ "OfacProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.OfacProxyBase}}",
+    "OfacSearch": "/api/v1/institutions/{0}/products/{1}/Wires/ofac-proxy-service/ofac-search?count={2}&nextoffset={3}",
+    "EntityMatchSearch": "/api/v1/institutions/{0}/products/{1}/Wires/ofac-proxy-service/entity-match-search?count={2}&nextoffset={3}"
+  },
+  "EncryptionSetting": {
+    "AzureBlobName": "wdek.xml",
+    "AzureBlobStorageAccountKey": "{{secret:CSS-EK-StorageAccountKey}}",
+    "AzureBlobStorageAccountName": "{{config:CSS.EK.StorageAccountName}}",
+    "AzureBlobStorageAppName": "wire-service",
+    "AzureBlobStorageUri": "https://{{config:CSS.EK.StorageAccountName}}.blob.core.windows.net/d-wdek-1",
+    "AzureVaultClientId": "{{secret:AzKvClientId}}",
+    "AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+    "AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection",
+    "EncryptionKey": "my-very-long-key-of-no-exact-size"
+  },
+  "FIProxyServiceUrls": {
+    "BaseUrl": "{{config:CSS.FIProxyBase}}"
+  },
+  "FileStorageSettings": {
+    "ConnectionString": "{{config:CSS.FileStorageConnectionString}}"
+  },
+  "HttpHeaderSetting": {
+    "HeaderExclusions": [
+      {
+        "HeaderName": "Content-Type",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Content-Length",
+        "HttpMethods": [
+          "Get"
+        ]
+      },
+      {
+        "HeaderName": "Transfer-Encoding",
+        "HttpMethods": [
+          "Get"
+        ]
+      }
+    ],
+    "HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+    "HeaderValidationExcludedURLs": [
+      "/api/incoming-wire-service/swagger",
+      "/api/incoming-wire-service/hc",
+      "/swagger"
+    ]
+  },
+  "IdentityRequest": {
+    "Acr_Values": "tenant:",
+    "Client_Id": "jha-css-bg",
+    "Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+    "Grant_Type": "password",
+    "Password": "{{secret:system1--jha-service-account-com-Password}}",
+    "UserName": "system1@jha-service-account.com"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api",
+      "bg-api",
+      "bg-api-ex"
+    ]
+  },
+  "Kafka": {
+    "AutoCommitIntervalMs": 5000,
+    "BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+    "Certificates": {
+      "CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+      "ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+      "ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+    },
+    "ClientId": "IWireCommonOrchestratorService.Api",
+    "DbConnection": {
+      "CollectionName": {
+        "Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+        "ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+        "PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+      },
+      "ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+      "DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+    },
+    "GroupId": "IWireCommonOrchestratorService.Api",
+    "MaxPollIntervalMs": 300000,
+    "RetrySettings": {
+      "IsRequired": true
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "MasterDataServiceURLs": {
+    "MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+    "OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+  },
+  "BeneficiaryServiceUrls": {
+    "BaseUrl": "{{config:CSS.BeneficiaryServiceBase}}",
+    "OfacStatusUpdate": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/internal/ofac-status"
+  },
+  "MongoDbSettings": {
+    "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssIWireBeneficiary_user:{{secret:cssIWireBeneficiary-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+    "DatabaseName": "cssIWireBeneficiary"
+  },
+  "MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+  "PagingDefaultValue": {
+    "PageNo": "1",
+    "PageSize": "10"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "SettingServiceURLs": {
+    "BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}",
+    "CurrencyURL": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/Common",
+	"GetSetConfiguration": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/{3}",
+    "GetSetProcessingDay": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/business-day",
+    "DeleteProcessingDay": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/business-day/{3}",
+	"GetWorkflowSettingsUrl": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/helper/workflow-settings"
+  },
+  "WiresTransferServiceUrls": {
+    "BaseUrl": "{{config:CSS.IWireTransferServiceBase}}",
+	"GetWire": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/transactions/{3}",
+    "SaveWireStatus": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/AddWireStatus",
+    "GetWireStatus": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/statuses",
+	"GetWorkflow": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/workflow/{3}",
+	"UpdateWorkflow": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/workflow/{3}",
+	"AddWorkflow": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/workflow",
+	"ProcessWorkflow": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-transfer-service/workflow-step/processor"
+    },
+  "ServiceDictionaryServiceUrls": {
+	"BaseAddress": "{{config:CSS.ServiceDictionaryProxyServiceBase}}",
+    "TransactionCode": "/api/v1/institutions/{0}/products/{1}/{2}/service-dictionary-proxy-service/transactionCode/{3}",
+    "Cache": "/api/v1/institutions/{0}/products/{1}/{2}/service-dictionary-proxy-service/cache"
+  },
+  "TenantConfigURL": "{{config:CSS.TenantConfigServiceUrl}}",
+  "AzureAppConfiguration": {
+    "ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+    "RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+  }
+}

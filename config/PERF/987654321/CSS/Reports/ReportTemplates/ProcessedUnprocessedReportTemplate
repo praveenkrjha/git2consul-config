@@ -1,0 +1,202 @@
+<html><body>
+<table>
+<tr>
+<td><b>Transfer Date:</b></td>
+<td>{transferdate}</td>
+<td><b>Transfer Status:</b></td>
+<td>{transferstatus}</td>
+<td><b>Entry WorkStation:</b></td>
+<td>{workstation}</td>
+<td>{wiretype}</td>
+</tr>
+<tr>
+<td><b>Transfer Time:</b></td>
+<td>{transfertime}</td>
+<td><b>Transfer Type:</b></td>
+<td>{transfertype}</td>
+<td><b>Entered by user:</b></td>
+<td>{createduser}</td>
+<td></td>
+</tr>
+<tr>
+<td><b>Debit Account</b></td>
+<td></td>
+<td><b>Frequency</b></td>
+<td></td>
+<td><b>Initiated Workstation:</b></td>
+<td>{intitiatedworkstation}</td>
+<td></td>
+</tr>
+<tr>
+<td><b>Account Number / Type</b></td>
+<td>{accountid} / {accounttype}</td>
+<td></td>
+<td></td>
+<td><b>Initiated By User:</b></td>
+<td>{intitiateduser}</td>
+<td></td>
+</tr>
+<tr>
+<td><b>Originator Name</b></td>
+<td>{originatorname}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Originator Address 1</b></td>
+<td>{originatoraddress1}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Originator Address 2</b></td>
+<td>{originatoraddress2}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Originator Address 3</b></td>
+<td>{originatoraddress3}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Transfer Amount</b></td>
+<td>{transferamount}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Wire Source Code</b></td>
+<td>{sourcecode}</td>
+<td><b>Business Function Code</b></td>
+<td>{functioncode}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Credit Account</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Account Number / Type</b></td>
+<td>{beneficiaryaccountno}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Account Name</b></td>
+<td>{beneficiaryaccountname}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Receiving Bank</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>ABA Number</b></td>
+<td>{abanumber}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Bank Name</b></td>
+<td>{bankname}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Address 1</b></td>
+<td>{bankaddress1}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Address 2</b></td>
+<td>{bankaddress2}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Address 3</b></td>
+<td>{bankaddress3}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Address 4</b></td>
+<td>{bankaddress4}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Remarks</b></td>
+<td>{remarks}</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><b>Wire Transfer Fee</b></td>
+<td>{fee}</td>
+<td><b>Print Notice</b></td>
+<td>{printnotice}</td>
+<td><b>Repetitve Code</b></td>
+<td>{repetitivecode}</td>
+<td></td>
+</tr>
+</table>
+</body></html>

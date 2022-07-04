@@ -1,0 +1,169 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "ConfigValue": {
+            "properties": {
+                "depositIncomingWire": {
+                    "items": [
+                        {
+                            "properties": {
+                                "activeWireSource": {
+                                    "type": "boolean"
+                                },
+                                "ddInterfaceLine": {
+                                    "type": "string"
+                                },
+                                "depositAccountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "providerAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "providerAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "providerAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerTransactionCode": {
+                                    "type": "string"
+                                },
+                                "settlementAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "settlementAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "settlementAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "settlementAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "settlementAccountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCodeDescription": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "wireSourceCode",
+                                "wireSourceCodeDescription",
+                                "ddInterfaceLine",
+                                "depositAccountTransactionCode",
+                                "settlementAccountBranchNumber",
+                                "settlementAccountAccountNumber",
+                                "settlementAccountTransactionCode",
+                                "providerAccountBranchNumber",
+                                "providerAccountAccountNumber",
+                                "providerTransactionCode",
+                                "activeWireSource"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "depositOutgoingWire": {
+                    "items": [
+                        {
+                            "properties": {
+                                "activeWireSource": {
+                                    "type": "boolean"
+                                },
+                                "ddInterfaceLine": {
+                                    "type": "string"
+                                },
+                                "depositAccountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "providerAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "providerAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "providerAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerTransactionCode": {
+                                    "type": "string"
+                                },
+                                "settlementAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "settlementAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "settlementAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "settlementAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "settlementAccountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCodeDescription": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "wireSourceCode",
+                                "wireSourceCodeDescription",
+                                "ddInterfaceLine",
+                                "depositAccountTransactionCode",
+                                "settlementAccountBranchNumber",
+                                "settlementAccountAccountNumber",
+                                "settlementAccountTransactionCode",
+                                "providerAccountBranchNumber",
+                                "providerAccountAccountNumber",
+                                "providerTransactionCode",
+                                "activeWireSource"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "depositOutgoi9ngWire",
+                "depositIncomingWire"
+            ],
+            "type": "object"
+        }
+    },
+    "type": "object"
+}

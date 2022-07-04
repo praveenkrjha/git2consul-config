@@ -1,0 +1,8 @@
+{
+    "FedLineOperatingStatus": "T",
+    "IsDirectLineCustomer": "false",
+    "RetrySettings": {
+        "Interval": 2000,
+        "Timeout": 10000
+    }
+}

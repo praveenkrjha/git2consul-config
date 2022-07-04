@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "wireIntiation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+		"enum": [ "FinancialInstitution", "Internet", "ThirdParty", "TreasuryManagement" ]
+      },
+      "additionalItems": false
+    },
+    "operatingStatus": {
+      "type": "string",
+      "enum": [ "Online", "Offline", "Certify", "Testing" ]
+    },
+    "servMsgDual": {
+      "type": "string",
+      "enum": [ "All", "DrawdownsOnly", "None" ]
+    },
+    "resend": {
+      "type": "boolean"
+    },
+    "servMsgDualFor": {
+      "type": "string",
+      "enum": [ "None", "Incoming", "Outgoing", "Both" ]
+    },
+    "fgaReceiving": {
+      "type": "boolean"
+    },
+    "dollarAmount": {
+      "type": "string"
+    },
+    "waitBeforeTimeout": {
+      "type": "boolean"
+    },
+    "fedBalanceWarning": {
+      "type": "string"
+    },
+    "activateFedBalanceWarning": {
+      "type": "boolean"
+    },
+    "extnOverideNormalTime": {
+      "type": "string",
+      "enum": [ "None", "Incoming", "Outgoing", "Both" ]
+    },
+    "frbOperatingHours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "wireType": {
+            "type": "integer"
+          },
+          "frbClosingTime": {
+            "type": "string"
+          },
+          "frbExtensionTime": {
+            "type": "string"
+          },
+          "frbOpeningTime": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "wireType",
+          "frbClosingTime",
+          "frbExtensionTime",
+          "frbOpeningTime"
+        ]
+      },
+      "additionalItems": false
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "wireIntiation",
+    "operatingStatus",
+    "servMsgDual",
+    "resend",
+    "servMsgDualFor",
+    "fgaReceiving",
+    "dollarAmount",
+    "waitBeforeTimeout",
+    "fedBalanceWarning",
+    "activateFedBalanceWarning",
+    "extnOverideNormalTime",
+    "frbOperatingHours"
+  ]
+}

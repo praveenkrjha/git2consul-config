@@ -1,0 +1,6 @@
+{
+    "AccessTokenExpirationInMins": 19,
+    "ClientCode": "252720",
+    "Issuer": "252720_API_User",
+    "PrivateKey": "{{secret:s987654321CSSIWireCambridgeProxy-ClientLevel-PrivateKey}}"
+}

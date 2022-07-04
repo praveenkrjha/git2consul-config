@@ -1,0 +1,1 @@
+DefaultEndpointsProtocol=https;AccountName={{config:CSS.CSS-Reports-File-Storage-Account-Name}};AccountKey={{secret:CSS-Reports-File-Storage-Password}};EndpointSuffix=core.windows.net

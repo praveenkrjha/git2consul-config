@@ -1,0 +1,15 @@
+{
+	"HeaderExclusions": [
+		{
+			"HeaderName": "Content-Length",
+			"HttpMethods": [
+				"Get"
+			]
+		}
+	],
+	"HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+	"HeaderValidationExcludedURLs": [
+		"/api/gateway/swagger",
+		"/api/gateway/hc,/swagger"
+	]
+}

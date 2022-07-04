@@ -1,0 +1,204 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "dualControlConfig": {
+            "items": [
+                {
+                    "properties": {
+                        "action": {
+                            "type": "string"
+                        },
+                        "incoming": {
+                            "type": "boolean"
+                        },
+                        "outgoing": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "action",
+                        "incoming",
+                        "outgoing"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "action": {
+                            "type": "string"
+                        },
+                        "incoming": {
+                            "type": "boolean"
+                        },
+                        "outgoing": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "action",
+                        "incoming",
+                        "outgoing"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "action": {
+                            "type": "string"
+                        },
+                        "incoming": {
+                            "type": "boolean"
+                        },
+                        "outgoing": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "action",
+                        "incoming",
+                        "outgoing"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "action": {
+                            "type": "string"
+                        },
+                        "incoming": {
+                            "type": "boolean"
+                        },
+                        "outgoing": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "action",
+                        "incoming",
+                        "outgoing"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "minItems": 4,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "incomingWireRoleLimit": {
+            "items": [
+                {
+                    "properties": {
+                        "incomingWireDualControlAmount": {
+                            "type": "string"
+                        },
+                        "incomingWireDualControlRequired": {
+                            "type": "boolean"
+                        },
+                        "role": {
+                            "minLength": 1,
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "role",
+                        "incomingWireDualControlRequired",
+                        "incomingWireDualControlAmount"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "incomingWireDualControlAmount": {
+                            "type": "string"
+                        },
+                        "incomingWireDualControlRequired": {
+                            "type": "boolean"
+                        },
+                        "role": {
+                            "minLength": 1,
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "role",
+                        "incomingWireDualControlAmount",
+                        "incomingWireDualControlRequired"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "type": "array"
+        },
+        "roleSettings": {
+            "items": [
+                {
+                    "properties": {
+                        "outgoingWireDualControlAmount": {
+                            "type": "string"
+                        },
+                        "outgoingWireDualControlRequired": {
+                            "type": "boolean"
+                        },
+                        "role": {
+                            "minLength": 1,
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "role",
+                        "outgoingWireDualControlRequired",
+                        "outgoingWireDualControlAmount"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "outgoingWireDualControlAmount": {
+                            "type": "string"
+                        },
+                        "outgoingWireDualControlRequired": {
+                            "type": "boolean"
+                        },
+                        "role": {
+                            "minLength": 1,
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "role",
+                        "outgoingWireDualControlRequired",
+                        "outgoingWireDualControlAmount"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "outgoingWireDualControlAmount": {
+                            "type": "string"
+                        },
+                        "outgoingWireDualControlRequired": {
+                            "type": "boolean"
+                        },
+                        "role": {
+                            "minLength": 1,
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "role",
+                        "outgoingWireDualControlAmount",
+                        "outgoingWireDualControlRequired"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "type": "array"
+        }
+    },
+    "required": [
+        "roleSettings",
+        "incomingWireRoleLimit",
+        "dualControlConfig"
+    ],
+    "type": "object"
+}

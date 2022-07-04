@@ -1,0 +1,35 @@
+{
+  "AllowedHosts": "*",
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "Consul": {
+    "Host": "{{config:CSS.ConsulHostUrl}}"
+  },
+  "IdentitySettings": {
+    "IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+    "ValidAudiences": [
+      "jha-ux",
+      "ux-api"
+    ]
+  },
+  "ApplicationInsights": {
+    "InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+  },
+  "RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+  "EncryptionSetting": {
+    "EncryptionKey": "my-very-long-key-of-no-exact-size",
+    "AzureBlobName": "wdek.xml",
+    "AzureBlobStorageUri": "https://{{config:CSS.CSS-Reports-File-Storage-Account-Name}}.blob.core.windows.net/d-wdek-1",
+    "AzureBlobStorageAccountName": "{{config:CSS.CSS-Reports-File-Storage-Account-Name}}",
+    "AzureBlobStorageAccountKey": "{{secret:CSS-Reports-File-Storage-Password}}",
+    "AzureBlobStorageAppName": "wire-service",
+    "AzureVaultClientId": "{{secret:AzKvClientId}}",
+    "AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+    "AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection"
+  }
+}

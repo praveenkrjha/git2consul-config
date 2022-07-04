@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "ReportConfigurations": {
+            "additionalProperties": false,
+            "properties": {
+                "Reports": {
+                    "additionalItems": false,
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "application": {
+                                "enum": [
+                                    "System Report",
+                                    "Wire Transfers"
+                                ],
+                                "type": "string"
+                            },
+                            "assignedFolders": {
+                                "additionalItems": false,
+                                "items": {
+                                    "additionalItems": false,
+                                    "additionalProperties": false,
+                                    "items": {}
+                                },
+                                "type": "array"
+                            },
+                            "formType": {
+                                "enum": [
+                                    "STD",
+                                    "NOTICE"
+                                ],
+                                "type": "string"
+                            },
+                            "frequency": {
+                                "items": {
+                                    "enum": [
+                                        "Daily",
+                                        "OnDemand"
+                                    ],
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "reportKey": {
+                                "type": "string"
+                            },
+                            "reportName": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "reportKey",
+                            "reportName",
+                            "formType",
+                            "application",
+                            "assignedFolders",
+                            "frequency"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Reports"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "ReportConfigurations"
+    ],
+    "type": "object"
+}

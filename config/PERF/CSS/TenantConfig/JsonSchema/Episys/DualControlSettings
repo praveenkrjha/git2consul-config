@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "dualControl": {
+      "type": "boolean"
+    },
+    "dualControlVerificationRequired": {
+      "type": "boolean"
+    },
+    "roleSettings": {
+      "type": "array",
+      "items": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string"
+            },
+            "outgoingWireDualControlRequired": {
+              "type": "boolean"
+            },
+            "outgoingWireDualControlAmount": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "role",
+            "outgoingWireDualControlRequired",
+            "outgoingWireDualControlAmount"
+          ]
+        },
+      "additionalItems": false
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "dualControl",
+    "dualControlVerificationRequired",
+    "roleSettings"
+  ]
+}

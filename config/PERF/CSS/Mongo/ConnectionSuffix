@@ -1,0 +1,1 @@
+admin?retryWrites=true&w=majority&maxPoolSize=100&waitQueueMultiple=2000

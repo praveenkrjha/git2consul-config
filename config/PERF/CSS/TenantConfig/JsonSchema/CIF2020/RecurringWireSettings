@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "AllowRecurringWire": {
+      "type": "boolean"
+    },
+    "RecurringWiresNonBusinessDayPeriod": {
+      "type": "string",
+	  "enum": ["Before", "After"]
+    },
+    "CreateRecurringWireEndBusinessDay": {
+      "type": "boolean"
+    },
+    "ReviewWiresPriorToInitiation": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "AllowRecurringWire",
+    "RecurringWiresNonBusinessDayPeriod",
+    "CreateRecurringWireEndBusinessDay",
+    "ReviewWiresPriorToInitiation"
+  ]
+}

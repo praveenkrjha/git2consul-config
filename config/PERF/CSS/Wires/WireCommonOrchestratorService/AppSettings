@@ -1,0 +1,134 @@
+{
+	"AccountProxyServiceUrls": {
+		"BaseUrl": "{{config:CSS.AccountProxyServiceBase}}"
+	},
+	"AllowedHosts": "*",
+	"ApplicationInsights": {
+		"InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+	},
+	"AuthorizationSetting": {
+		"AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+	},
+	"CacheSettings": {
+		"CacheOfacConfigurations": false,
+		"InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+		"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+	},
+	"DlwProxyServiceUrls": {
+		"BaseUrl": "{{config:CSS.DLWProxyBase}}"
+	},
+	"HttpHeaderSetting": {
+		"HeaderExclusions": [
+			{
+				"HeaderName": "Content-Type",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Content-Length",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Transfer-Encoding",
+				"HttpMethods": [
+					"Get"
+				]
+			}
+		],
+		"HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+		"HeaderValidationExcludedURLs": [
+			"/api/wire-common-orchestrator-service/swagger",
+			"/api/wire-common-orchestrator-service/hc",
+			"/swagger"
+		]
+	},
+	"IdentityRequest": {
+		"Acr_Values": "tenant:",
+		"Client_Id": "jha-css-bg",
+		"Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+		"Grant_Type": "password",
+		"Password": "{{secret:system1--jha-service-account-com-Password}}",
+		"UserName": "system1@jha-service-account.com"
+	},
+	"IdentitySettings": {
+		"IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+		"ValidAudiences": [
+			"jha-ux",
+			"ux-api",
+			"bg-api",
+			"bg-api-ex"
+		]
+	},
+	"IncomingWireDomainServiceUrls": {
+		"BaseUrl": "{{config:CSS.IncomingWireDomainBase}}"
+	},
+	"IncomingWireOrchestratorServiceUrls": {
+		"BaseUrl": "{{config:CSS.IncomingWireOrchestratorBase}}"
+	},
+	"Kafka": {
+		"AutoCommitIntervalMs": 5000,
+		"BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+		"Certificates": {
+			"CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+			"ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+			"ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+		},
+		"ClientId": "WireCommonOrchestratorService.Api",
+		"DbConnection": {
+			"CollectionName": {
+				"Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+				"ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+				"PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+			},
+			"ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+			"DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+		},
+		"GroupId": "WireCommonOrchestratorService.Api",
+		"MaxPollIntervalMs": 300000,
+		"RetrySettings": {
+			"IsRequired": true
+		}
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning",
+			"Microsoft.Hosting.Lifetime": "Information"
+		}
+	},
+	"MasterDataServiceURLs": {
+		"MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+		"OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+	},
+	"MongoSettings": {
+		"Connection": {
+			"ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssWiresCommonOrchestrator_user:{{secret:cssWiresCommonOrchestrator-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+			"DatabaseName": "cssWiresCommonOrchestrator"
+		}
+	},
+	"OfacProxyServiceUrls": {
+		"BaseUrl": "{{config:CSS.OfacProxyBase}}"
+	},
+	"OutgoingWireDomainServiceUrls": {
+		"BaseUrl": "{{config:CSS.WiresDomainBase}}"
+	},
+	"OutgoingWireOrchestratorServiceUrls": {
+		"BaseUrl": "{{config:CSS.OutgoingWireOrchestratorBase}}"
+	},
+	"OutgoingWireWorkflowOrchestratorServiceUrls": {
+		"BaseUrl": "{{config:CSS.WireWorkflowOrchestratorBase}}"
+	},
+	"RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+	"SettingServiceUrls": {
+		"BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}"
+	},
+	"EODBackupPurgeAfterDays": "{{config:CSS.EODBackupPurgeAfterDays}}",
+	"ServiceDictionaryProxyBaseUrl": "{{config:CSS.ServiceDictionaryProxyServiceBase}}",
+	"AzureAppConfiguration": {
+    "ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+    "RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "ServerName": "jxchange.gadev.jha-sys.com",
+  "Password": "{{secret:s112233445CSSjXchangeProvidersCore}}",
+  "UserName": "CSSDevelopment@dev.jha",
+  "InstEnv": "SLTEST",
+  "InstRtId": "112233445",
+  "FinInstRtId": "112233445",
+  "LTermId": "MMQFMCX0"
+}

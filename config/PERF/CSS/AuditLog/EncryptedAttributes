@@ -1,0 +1,42 @@
+[
+    {
+        "Attributes": [
+            "accountId",
+            "originatorAddress.street1",
+            "originatorAddress.street2",
+            "originatorAddress.street3",
+            "originatorName.common",
+            "beneficiaryAddress.street1",
+            "beneficiaryAddress.street2",
+            "beneficiaryAddress.street3",
+            "beneficiaryName.common",
+            "beneficiaryId",
+            "beneficiaryReference",
+            "originatorReference",
+            "customerName"
+        ],
+        "Feature": "WireRecords"
+    },
+    {
+        "Attributes": [
+            "originatorAddress.street1",
+            "originatorAddress.street2",
+            "originatorAddress.street3"
+        ],
+        "Feature": "TenantConfiguration"
+    },
+    {
+        "Attributes": [
+            "accountId"
+        ],
+        "Feature": "Privileges"
+    },
+    {
+        "Attributes": [
+            "originatorAddress.street1",
+            "originatorAddress.street2",
+            "originatorAddress.street3"
+        ],
+        "Feature": "Settings"
+    }
+]

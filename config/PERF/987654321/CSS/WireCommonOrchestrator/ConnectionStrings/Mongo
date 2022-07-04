@@ -1,0 +1,4 @@
+{
+    "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssWiresCommonOrchestrator_user:{{secret:cssWiresCommonOrchestrator-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+    "DatabaseName": "cssWiresCommonOrchestrator"
+}

@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "FolderConfigurations": {
+            "properties": {
+                "Folders": {
+                    "items": [
+                        {
+                            "properties": {
+                                "Description": {
+                                    "type": "string"
+                                },
+                                "FolderName": {
+                                    "type": "string"
+                                },
+                                "Roles": {
+                                    "items": [
+                                        {
+                                            "properties": {
+                                                "RoleName": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "RoleName"
+                                            ],
+                                            "type": "object"
+                                        }
+                                    ],
+                                    "type": "array"
+                                },
+                                "Type": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "Roles",
+                                "FolderName",
+                                "Type",
+                                "Description"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "Folders"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "FolderConfigurations"
+    ],
+    "type": "object"
+}

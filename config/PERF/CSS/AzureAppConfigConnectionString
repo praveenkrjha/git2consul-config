@@ -1,0 +1,1 @@
+Endpoint=https://css-perf-appconfiguration.azconfig.io;Id={{secret:JHWires--AzureAppConfigId}};Secret={{secret:JHWires--AzureAppConfigSecret}}

@@ -1,0 +1,187 @@
+{
+	"AllowedHosts": "*",
+	"ApplicationInsights": {
+		"InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+	},
+	"AuthorizationServiceBase": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/ProductId/ApplicationId/role-service",
+	"AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/role-service/roles/CommaSeperatedRoleNames/permissions",
+	"AuthorizationSetting": {
+		"AssignedToMePermissionsUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome",
+		"AuthorizationServiceUrl": "{{config:CSS.AuthorizationServiceBase}}/api/v1/institutions/InstitutionId/products/CSS/ApplicationId/role-service/permissions/assignedtome"
+	},
+	"AzureFileStorageURL": "{{config:CSS.AzureFileStorageURL}}",
+	"CacheSettings": {
+		"InMemoryCacheTimeout": "1000000",
+		"InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}",
+		"DistributedCacheTimeoutMinutes": "{{config:CSS.DistributedCacheTimeoutMinutes}}"
+	},
+	"EncryptionSetting": {
+		"AzureBlobName": "wdek.xml",
+		"AzureBlobStorageAccountKey": "{{secret:CSS-Reports-File-Storage-Password}}",
+		"AzureBlobStorageAccountName": "{{config:CSS.CSS-Reports-File-Storage-Account-Name}}",
+		"AzureBlobStorageAppName": "wire-service",
+		"AzureBlobStorageUri": "https://{{config:CSS.CSS-Reports-File-Storage-Account-Name}}.blob.core.windows.net/d-wdek-1",
+		"AzureVaultClientId": "{{secret:AzKvClientId}}",
+		"AzureVaultClientSecret": "{{secret:AzKvClientSecret}}",
+		"AzureVaultKeyIdentifier": "{{secret:AzKvHostName}}keys/WireDomainServiceDataProtection",
+		"EncryptionKey": "my-very-long-key-of-no-exact-size"
+	},
+	"FileStorageSettings": {
+		"ConnectionString": "{{config:CSS.FileStorageConnectionString}}"
+	},
+	"HttpHeaderSetting": {
+		"HeaderExclusions": [
+			{
+				"HeaderName": "Content-Type",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Content-Length",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Transfer-Encoding",
+				"HttpMethods": [
+					"Get"
+				]
+			}
+		],
+		"HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+		"HeaderValidationExcludedURLs": [
+			"/api/iwire-transfer-service/swagger",
+			"/api/iwire-transfer-service/hc",
+			"/swagger"
+		]
+	},
+	"IdentityRequest": {
+		"Acr_Values": "tenant:",
+		"Client_Id": "jha-css-bg",
+		"Client_Secret": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}",
+		"Grant_Type": "password",
+		"Password": "{{secret:system1--jha-service-account-com-Password}}",
+		"UserName": "system1@jha-service-account.com"
+	},
+	"IdentitySettings": {
+		"IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+		"ValidAudiences": [
+			"jha-ux",
+			"ux-api",
+			"bg-api",
+			"bg-api-ex"
+		]
+	},
+	"Kafka": {
+		"AutoCommitIntervalMs": 5000,
+		"BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+		"Certificates": {
+			"CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+			"ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+			"ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+		},
+		"ClientId": "IntlWireTransferService.Api",
+		"DbConnection": {
+			"CollectionName": {
+				"Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+				"ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+				"PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+			},
+			"ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+			"DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+		},
+		"GroupId": "IntlWireTransferService.Api",
+		"MaxPollIntervalMs": 300000,
+		"RetrySettings": {
+			"IsRequired": true
+		}
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Information",
+			"Microsoft": "Warning",
+			"Microsoft.Hosting.Lifetime": "Information"
+		}
+	},
+	"MasterDataServiceURLs": {
+		"MultipleOptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/multipleoptions",
+		"OptionTypeUrl": "{{config:CSS.MasterDataServiceBase}}/api/v1/institutions/{InstitutionId}/products/{ProductId}/{ApplicationId}/master-data-service/option/{OptionTypeKey}/{OptionDepth}"
+	},
+	"MongoDbSettings": {
+		"Connection": {
+			"ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssIWireTransfer_user:{{secret:cssIWireTransfer-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+			"DatabaseName": "cssIWireTransfer"
+		}
+	},
+	"PagingDefaultValue": {
+		"PageNo": "1",
+		"PageSize": "10"
+	},
+	"RedisConnectionString": "{{config:CSS.RedisConnectionString}}",
+	"SettingServiceURLs": {
+		"BaseUrl": "{{config:CSS.TenantConfigServiceUrl}}",
+		"ProductConfigurationUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/{1}",
+		"BusinessDayUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/business-day",
+		"DualControlConfigurationUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/{1}",
+		"OfacSettingsUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/common/subsections/ofacconfiguration",
+		"CommonDetailsSettingsUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/common/subsections/detailsconfiguration",
+		"EmailSettingsUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/internationalsettings/email/internal",
+		"AccountEmailSettingsUrl": "/api/v1/institutions/{0}/products/CSS/InternationalWires/setting-service/account-email/search",
+		"YearCalendar": "/api/v1/institutions/{0}/products/{1}/InternationalWires/setting-service/calendar/{2}",
+		"WorkflowSettingsUrl": "/api/v1/institutions/{0}/products/{1}/{2}/setting-service/internationalsettings/helper/workflow-settings"
+	},
+	"TenantConfigURL": "{{config:CSS.TenantConfigServiceUrl}}",
+	"WorkflowConfigDefaultSteps": [
+		{
+			"Order": 1,
+			"ProcessStep": "OFAC"
+		},
+		{
+			"Order": 2,
+			"ProcessStep": "DualControl"
+		}
+	],
+	"IWiresBeneficiaryServiceUrls": {
+		"BaseUrl": "{{config:CSS.BeneficiaryServiceBase}}",
+		"GetBeneficiaryRulesUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/rules",	
+		"UpdateBeneficiaryFirstTransferStatusUrl": "/api/v1/institutions/{0}/products/{1}/{2}/iwire-beneficiary-service/firstTransferStatus"
+	},
+	"CambridgeProxyServiceURLs": {
+		"BaseUrl": "{{config:CSS.CambridgeProxyServiceBase}}",
+		"GetQuoteByIdUrl": "/api/v1/institutions/{0}/products/{1}/{2}/cambridgelink-proxy-service/rate-quote/quotes/{3}"
+	},
+	"EnsProxyServiceUrls": {
+		"BaseUrl": "{{config:CSS.EnsProxyServiceBase}}",
+		"AddEmailNotificationAlertUrl": "/api/v1/institutions/{0}/products/jha-css/InternationalWires/ens-proxy-service/email"
+	},
+	"FinancialInstitutionServiceUrls": {
+		"BaseUrl": "{{config:CSS.FIProxyBase}}",
+		"GetFinancialInstitutionInfoUrl": "/api/v1/institutions/{0}/products/jha-css/InternationalWires/fi-proxy-service/fi/info"
+	},
+	"IWireCommonOrchestratorServiceUrls": {
+		"BaseUrl": "{{config:CSS.IWireCommonOrchestratorServiceBase}}",
+		"WorkflowActionExecuteUrl": "/api/v1/institutions/{0}/products/jha-css/InternationalWires/iwire-common-orchestrator-service/workflow-action/execute"
+	},
+	"WireConfigurations": {
+		"MaxNumberOfStatesToShowOnExpandedTimeline": "3"
+	},
+	"InternalEmailNotificationAlerts": {
+		"ThirdParty": "InternationalThirdPartyWireNotification",
+		"TreasuryManagement": "InternationalTreasuryManagementWireNotification",
+		"Internet": "InternationalInternetWireNotification",
+		"DailyLimit": "InternationalWireDailyLimitNotification",
+		"UnprocessedWire": "InternationalUnprocessedWiresNotification"
+	},
+	"ExternalEmailNotificationAlerts": {
+		"CustomerNotification": "InternationalWireCustomerNotification",
+		"BeneficiaryNotification": "InternationalWireBeneficiaryNotification"
+	},
+	"BulkWritePageSize": "{{config:CSS.Mongo.BulkWritePageSize}}",
+	"EODBackupPurgeAfterDays": "{{config:CSS.EODBackupPurgeAfterDays}}",
+	"AzureAppConfiguration": {
+		"ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+		"RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+	}
+}

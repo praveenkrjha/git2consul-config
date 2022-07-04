@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "detailsConfiguration": {
+            "properties": {
+                "availableCurrencies": {
+                    "items": [
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "availableCurrencies"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "detailsConfiguration"
+    ],
+    "type": "object"
+}

@@ -1,0 +1,1162 @@
+{
+    "attributes": [
+        {
+            "name": "customerName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104118",
+                    "type": "maxLength",
+                    "value": "35"
+                },
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "customerName.common"
+        },
+        {
+            "name": "FunctionType",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104160",
+                    "message": "Business Function Code is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "functionType"
+        },
+        {
+            "name": "Type",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104161",
+                    "message": "Wire Type/Sub Type is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "wireTypeSubType"
+        },
+        {
+            "name": "TransactionDescription",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104162",
+                    "message": "Only alpha \u2013 numeric characters permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9 ]+$"
+                },
+                {
+                    "errorCode": "104119",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "transactionDescription"
+        },
+        {
+            "name": "OriginatorName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104120",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorName.common"
+        },
+        {
+            "name": "OriginatorAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104121",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorAddress.street1"
+        },
+        {
+            "name": "OriginatorAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104122",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorAddress.street2"
+        },
+        {
+            "name": "OriginatorAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104123",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorAddress.street3"
+        },
+        {
+            "name": "PaymentNotificationName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104124",
+                    "type": "maxLength",
+                    "value": "140"
+                }
+            ],
+            "value": "paymentNotificationName.common"
+        },
+        {
+            "name": "PaymentNotificationCellNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104125",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationCellNumber"
+        },
+        {
+            "name": "PaymentNotificationEmailAddress",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104163",
+                    "message": "Invalid Contact Notification Electronic Address",
+                    "type": "pattern",
+                    "value": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+                },
+                {
+                    "errorCode": "104126",
+                    "type": "maxLength",
+                    "value": "2048"
+                }
+            ],
+            "value": "paymentNotificationEmailAddress"
+        },
+        {
+            "name": "PaymentNotificationPhoneNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104127",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationPhoneNumber"
+        },
+        {
+            "name": "PaymentNotificationFaxNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104128",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationFaxNumber"
+        },
+        {
+            "name": "PaymentNotificationCorrelationId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104129",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationCorrelationId"
+        },
+        {
+            "name": "feeSourceName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104130",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "alternateSourceCustomerName.common"
+        },
+        {
+            "name": "ReceiveFinancialInstitutionRoutingId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104164",
+                    "message": "Routing Number is required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": "104250",
+                    "message": "Only numeric characters are permitted",
+                    "type": "pattern",
+                    "value": "^[0-9]+$"
+                },
+                {
+                    "errorCode": "104165",
+                    "message": "Routing Number must be 9 characters long",
+                    "type": "minlength",
+                    "value": "9"
+                },
+                {
+                    "errorCode": "104131",
+                    "message": "The Receiver Routing Number exceeds the maximum length",
+                    "type": "maxlength",
+                    "value": "9"
+                }
+            ],
+            "value": "receiveFinancialInstitutionRoutingId"
+        },
+        {
+            "name": "ReceiveFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "receiveFinancialInstitutionRemarks"
+        },
+        {
+            "name": "ReceiveFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104166",
+                    "message": "FI Name is required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104132",
+                    "type": "maxLength",
+                    "value": "18"
+                }
+            ],
+            "value": "receiveFinancialInstitutionName"
+        },
+        {
+            "name": "BeneficiaryName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104168",
+                    "message": "Beneficiary Name is required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104133",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryName.common"
+        },
+        {
+            "name": "BeneficiaryAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104134",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryAddress.street1"
+        },
+        {
+            "name": "BeneficiaryAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104135",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryAddress.street2"
+        },
+        {
+            "name": "BeneficiaryAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104136",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryAddress.street3"
+        },
+        {
+            "name": "BeneficiaryAdviceCode",
+            "type": "string",
+            "validations": [],
+            "value": "beneficiaryAdviceCode"
+        },
+        {
+            "name": "OriginatorBeneficiaryRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "originatorBeneficiaryRemarks"
+        },
+        {
+            "name": "BeneficiaryRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryRemarks"
+        },
+        {
+            "name": "BeneficiaryId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104169",
+                    "message": "Beneficiary Id is required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104137",
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "beneficiaryId"
+        },
+        {
+            "name": "BeneficiaryReference",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104138",
+                    "type": "maxLength",
+                    "value": "16"
+                }
+            ],
+            "value": "beneficiaryReference"
+        },
+        {
+            "name": "OriginatorReference",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104162",
+                    "message": "Only alpha \u2013 numeric characters permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9 ]+$"
+                },
+                {
+                    "errorCode": "104139",
+                    "type": "maxLength",
+                    "value": "16"
+                }
+            ],
+            "value": "originatorReference"
+        },
+        {
+            "name": "PaymentMethodDescription",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "paymentMethodDescription"
+        },
+        {
+            "name": "BeneficiaryAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryAdviceRemarks"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104140",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionName"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104141",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104142",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104143",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104144",
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "originatorFinancialInstitutionId"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104145",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionName"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104146",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104147",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104148",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAdviceRemarks"
+        },
+        {
+            "name": "FinancialInstitutionToFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "financialInstitutionToFinancialInstitutionRemarks"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionRemarks"
+        },
+        {
+            "name": "InstructionFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104149",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionName"
+        },
+        {
+            "name": "InstructionFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104150",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "InstructionFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104151",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "InstructionFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104152",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "InstructionFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104153",
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "instructionFinancialInstitutionId"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104154",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionName"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104155",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104156",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104157",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionRemarks"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104158",
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionId"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAdviceRemarks"
+        },
+        {
+            "name": "FundSource",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104212",
+                    "message": "Business Function Code is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "FundSource"
+        },
+        {
+            "name": "templateName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104210",
+                    "message": "Template Name is required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": "104159",
+                    "type": "maxLength",
+                    "value": "30"
+                }
+            ],
+            "value": "templateName"
+        },
+        {
+            "name": "ProductDescription",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104167",
+                    "type": "maxLength",
+                    "value": "300"
+                }
+            ],
+            "value": "ProductDescription"
+        },
+        {
+            "name": "UserTemplateId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104211",
+                    "message": "User Template Id is required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "UserTemplateId"
+        },
+        {
+            "name": "BeneficiaryDrawDownFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104170",
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "BeneficiaryDrawDownFinancialInstitutionId"
+        },
+        {
+            "name": "BeneficiaryDrawDownFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104171",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "BeneficiaryDrawDownFinancialInstitutionName"
+        },
+        {
+            "name": "BeneficiaryDrawDownFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104172",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "BeneficiaryDrawDownFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "BeneficiaryDrawDownFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104173",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "BeneficiaryDrawDownFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "BeneficiaryDrawDownFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104174",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "BeneficiaryDrawDownFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "DrawDownCreditFinancialInstitutionRoutingId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104175",
+                    "message": "Only numeric characters are permitted",
+                    "type": "pattern",
+                    "value": "^[0-9]+$"
+                },
+                {
+                    "errorCode": "104176",
+                    "message": "Draw Down Credit Financial Institution Routing Number must be 9 characters long",
+                    "type": "minlength",
+                    "value": "9"
+                },
+                {
+                    "errorCode": "104177",
+                    "message": "Draw Down Credit Financial Institution Routing Number exceeds the maximum length",
+                    "type": "maxlength",
+                    "value": "9"
+                }
+            ],
+            "value": "DrawDownCreditFinancialInstitutionRoutingId"
+        },
+        {
+            "name": "DrawDownCreditFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "errorCode": "104178",
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "DrawDownCreditFinancialInstitutionName"
+        },
+        {
+            "name": "DrawDownFinancialInstitutionAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "DrawDownFinancialInstitutionAdviceRemarks"
+        },
+        {
+            "name": "InformationRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": "104117",
+                    "message": "The *,\u00a6,^,{,[,},],| and \u00a2 characters are not permitted",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "InformationRemarks"
+        },
+        {
+            "name": "SourceId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": "104178",
+                    "type": "maxLength",
+                    "value": "200"
+                }
+            ],
+            "value": "SourceId"
+        }
+    ]
+}

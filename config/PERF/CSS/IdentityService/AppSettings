@@ -1,0 +1,219 @@
+{
+	"ApplicationInsights": {
+		"InstrumentationKey": "{{config:CSS.ApplicationInsights.InstrumentationKey}}"
+	},
+	"CacheSettings": {
+		"InMemoryCacheTimeout": "100000",
+		"InMemoryCacheTimeoutMinutes": "{{config:CSS.InMemoryCacheTimeoutMinutes}}"
+	},
+	"HttpHeaderSetting": {
+		"HeaderExclusions": [
+			{
+				"HeaderName": "Content-Type",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Content-Length",
+				"HttpMethods": [
+					"Get"
+				]
+			},
+			{
+				"HeaderName": "Transfer-Encoding",
+				"HttpMethods": [
+					"Get"
+				]
+			}
+		],
+		"HeaderValidationExcludedExtentionsPattern": "^.*\\.(html|js|ico|css|ico|json)$",
+		"HeaderValidationExcludedURLs": [
+			"/api/aba-service/swagger",
+			"/api/aba-service/hc",
+			"/swagger"
+		]
+	},
+	"IdentitySettings": {
+		"ApiResources": [
+			{
+				"Description": "UX Api",
+				"Name": "ux-api"
+			},
+			{
+				"Description": "Open Id",
+				"Name": "openid"
+			},
+			{
+				"Description": "BG Api",
+				"Name": "bg-api"
+			},
+			{
+				"Description": "External Request BG Api",
+				"Name": "bg-api-ex"
+			}
+		],
+		"CacheRedisStoreConnection": "{{config:CSS.RedisConnectionString}}",
+		"Clients": [
+			{
+				"AccessTokenLifetime": 86400,
+				"AllowTokenExchange": false,
+				"AllowedGrantTypes": [
+					"password"
+				],
+				"AllowedScopes": [
+					"ux-api",
+					"openid"
+				],
+				"ClientId": "jha-css-ux",
+				"ClientName": "UI",
+				"ClientSecrets": [
+					{
+						"Value": "{{secret:Identity-JHA-CSS-UX-Client-Secret}}"
+					}
+				],
+				"Enabled": true,
+				"RequireConsent": false
+			},
+			{
+				"AccessTokenLifetime": 86400,
+				"AllowTokenExchange": true,
+				"AllowedGrantTypes": [
+					"password"
+				],
+				"AllowedScopes": [
+					"ux-api",
+					"openid"
+				],
+				"ClientId": "jha-css-ux-xp",
+				"ClientName": "UI",
+				"ClientSecrets": [
+					{
+						"Value": "{{secret:Identity-JHA-CSS-UX-XP-Client-Secret}}"
+					}
+				],
+				"Enabled": true,
+				"RequireConsent": false
+			},
+			{
+				"AccessTokenLifetime": 86400,
+				"AllowTokenExchange": false,
+				"AllowedGrantTypes": [
+					"password"
+				],
+				"AllowedScopes": [
+					"bg-api"
+				],
+				"ClientId": "jha-css-bg",
+				"ClientName": "Background Service",
+				"ClientSecrets": [
+					{
+						"Value": "{{secret:Identity-JHA-CSS-BG-Client-Secret}}"
+					}
+				],
+				"Enabled": true,
+				"RequireConsent": false
+			},
+			{
+				"AccessTokenLifetime": 86400,
+				"AllowTokenExchange": true,
+				"AllowedGrantTypes": [
+					"password"
+				],
+				"AllowedScopes": [
+					"bg-api-ex"
+				],
+				"ClientId": "jha-css-bg-ex",
+				"ClientName": "Exteneral Request Background Service",
+				"ClientSecrets": [
+					{
+						"Value": "{{secret:Identity-JHA-CSS-BG-EX-Client-Secret}}"
+					}
+				],
+				"Enabled": true,
+				"RequireConsent": false
+			}
+		],
+		"IMSProxyBaseUrl": "{{config:CSS.IdentityProxyBase}}",
+		"IdentityResources": [
+			"openid",
+			"profile"
+		],
+		"IdentityUrl": "{{config:CSS.IdentityServiceUrl}}",
+		"RedisStoreConnection": "{{config:CSS.RedisConnectionString}}",
+		"SigningCertificate": "{{secret:CSS-Identity-Service-Signing-Certificate}}",
+		"SystemUserDomain": "jha-service-account.com",
+		"SystemUsers": [
+			{
+				"DisplayName": "System",
+				"Password": "{{secret:system1--jha-service-account-com-Password}}",
+				"Roles": [
+					"WireAdmin",
+					"JHA-CSS-{0}-{1}",
+					"WireApprover",
+					"All_CSS",
+					"Domain Users"
+				],
+				"UserName": "system1"
+			},
+			{
+				"DisplayName": "System",
+				"Password": "{{secret:system2--jha-service-account-com-Password}}",
+				"Roles": [
+					"WireAdmin",
+					"JHA-CSS-{0}-{1}",
+					"WireApprover",
+					"All_CSS",
+					"Domain Users"
+				],
+				"UserName": "system2"
+			}
+		]
+	},
+	"Kafka": {
+		"AutoCommitIntervalMs": 5000,
+		"BootstrapServers": "{{config:CSS.KafkaBootstrapServers.Servers}}",
+		"Certificates": {
+			"CaLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.CaLocation}}",
+			"ClientCertLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientCertLocation}}",
+			"ClientKeyLocation": "{{config:CSS.KafkaBootstrapServers.Certificates.ClientKeyLocation}}"
+		},
+		"ClientId": "IdentityService.API",
+		"DbConnection": {
+			"CollectionName": {
+				"Metadata": "{{config:CSS.MongoForMessageBus.CollectionName.Metadata}}",
+				"ProcessingFailed": "{{config:CSS.MongoForMessageBus.CollectionName.ProcessingFailed}}",
+				"PublishFailed": "{{config:CSS.MongoForMessageBus.CollectionName.PublishFailed}}"
+			},
+			"ConnectionString": "{{config:CSS.MongoForMessageBus.ConnectionString}}",
+			"DatabaseName": "{{config:CSS.MongoForMessageBus.DatabaseName}}"
+		},
+		"GroupId": "IdentityService.API",
+		"MaxPollIntervalMs": 300000,
+		"RetrySettings": {
+			"IsRequired": true
+		}
+	},
+	"Logging": {
+		"LogLevel": {
+			"Default": "Debug",
+			"Microsoft": "Information",
+			"System": "Information"
+		}
+	},
+	"TokenValidationSettings": {
+		"SelfSignedIssuers": [
+			"http://jx-alpha.ess-az.com/FedlineSalesDemo",
+			"http://jx-alpha.ess-az.com/adfs/services/trust"
+		]
+	},
+	"ValidationOptions": {
+		"RevocationFlag": "ExcludeRoot",
+		"RevocationMode": "Online",
+		"MinimunChainElements": "2"
+	},
+	"AzureAppConfiguration": {
+		"ConnectionString": "{{config:CSS.AzureAppConfigConnectionString}}",
+		"RefreshTimeSpan": "{{config:CSS.AzureAppConfigRefreshTimeSpan}}"
+	}
+}

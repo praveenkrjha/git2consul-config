@@ -1,0 +1,28 @@
+{
+    "Applications": [
+        {
+            "Edition": "Standard",
+            "Name": "InternationalWires"
+        }
+    ],
+    "Core": {
+        "City": "Monett",
+        "Description": "SilverLake - Bank 213 (International wires)",
+        "State": "MO",
+        "SvcPrvdName": "SilverLake",
+        "Zip": "65708"
+    },
+    "Domain": "dev.jha",
+    "Domains": [
+        "dev.jha",
+        "jhahosting.com"
+    ],
+    "JxchangeProviderMaintenanceAllowed": true,
+    "KafkaGroupName": "Group2",
+    "ReleaseVersion": "2020.01",
+    "TimezoneSettings": {
+        "TimeZoneFullName": "Mountain Standard Time",
+        "TimeZoneShort": "MST",
+        "TimeZoneValue": "America/Denver"
+    }
+}

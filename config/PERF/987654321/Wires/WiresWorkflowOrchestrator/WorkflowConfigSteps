@@ -1,0 +1,14 @@
+[
+  {
+    "order": 1,
+    "processStep": "New"
+  },
+  {
+    "order": 2,
+    "processStep": "OFAC"
+  },
+  {
+    "order": 3,
+    "processStep": "DualControl"
+  }
+]

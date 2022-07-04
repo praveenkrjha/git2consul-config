@@ -1,0 +1,453 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "accountConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "accountTypes": {
+                    "additionalItems": false,
+                    "items": {
+                        "enum": [
+                            "Deposit",
+                            "Savings",
+                            "ChristmasClub",
+                            "GeneralLedger",
+                            "Loan",
+                            "Overdraft"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "allowedRelationships": {
+                    "additionalItems": false,
+                    "items": {
+                        "enum": [
+                            "*",
+                            "A",
+                            "B",
+                            "C",
+                            "D",
+                            "E",
+                            "F",
+                            "G",
+                            "H",
+                            "I",
+                            "J",
+                            "K",
+                            "L",
+                            "M",
+                            "N",
+                            "O",
+                            "P",
+                            "Q",
+                            "R",
+                            "S",
+                            "T",
+                            "U",
+                            "W",
+                            "X",
+                            "Z"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "availableBalanceCalculationCode": {
+                    "type": "string"
+                },
+                "defaultBalanceType": {
+                    "additionalItems": false,
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "accountType": {
+                                "enum": [
+                                    "Deposit",
+                                    "Savings",
+                                    "ChristmasClub",
+                                    "GeneralLedger",
+                                    "Loan",
+                                    "Overdraft"
+                                ],
+                                "type": "string"
+                            },
+                            "balanceType": {
+                                "enum": [
+                                    "Available",
+                                    "Collected",
+                                    "Current",
+                                    "None"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "accountType",
+                            "balanceType"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "useGLCostCenter": {
+                    "type": "boolean"
+                },
+                "useGLProductCode": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "accountTypes",
+                "allowedRelationships",
+                "availableBalanceCalculationCode",
+                "defaultBalanceType"
+            ],
+            "type": "object"
+        },
+        "cutOffTimesConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "frbCutofTim": {
+                    "type": "string"
+                },
+                "internetWires": {
+                    "type": "string"
+                },
+                "returnWiresCutoffTime": {
+                    "type": "string"
+                },
+                "thirdPartyWires": {
+                    "type": "string"
+                },
+                "timeZone": {
+                    "type": "string"
+                },
+                "treasuryManagementWires": {
+                    "type": "string"
+                },
+                "wireCutoffTime": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "wireCutoffTime",
+                "returnWiresCutoffTime",
+                "internetWires",
+                "treasuryManagementWires",
+                "thirdPartyWires"
+            ],
+            "type": "object"
+        },
+        "detailsConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "AutoInitiateNextDayAtEOD": {
+                    "type": "boolean"
+                },
+                "MemoPostNextDayWiresDuringEndofDay": {
+                    "type": "boolean"
+                },
+                "federalWireTerminalId": {
+                    "type": "string"
+                },
+                "inputSource": {
+                    "type": "string"
+                },
+                "memoPostTransactions": {
+                    "type": "string"
+                },
+                "userCompareInititateAuthorization": {
+                    "type": "string"
+                },
+                "userRequestCorrelation": {
+                    "type": "string"
+                },
+                "wireTransferNotices": {
+                    "type": "array"
+                }
+            },
+            "required": [
+                "memoPostTransactions",
+                "AutoInitiateNextDayAtEOD",
+                "userRequestCorrelation",
+                "inputSource",
+                "MemoPostNextDayWiresDuringEndofDay",
+                "userCompareInititateAuthorization"
+            ],
+            "type": "object"
+        },
+        "identificationConfiguration": {
+            "properties": {
+                "defaultImportIdentificationType": {
+                    "properties": {
+                        "key": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "maxLength": 30,
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "key",
+                        "value"
+                    ],
+                    "type": "object"
+                },
+                "identificationType": {
+                    "items": {
+                        "oneOf": [
+                            {
+                                "properties": {
+                                    "key": {
+                                        "enum": [
+                                            "Passport"
+                                        ]
+                                    },
+                                    "value": {
+                                        "enum": [
+                                            "1 - Passport Number"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "key": {
+                                        "enum": [
+                                            "DriverLicense"
+                                        ]
+                                    },
+                                    "value": {
+                                        "enum": [
+                                            "3 - Driver\u2019s License Number"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "key": {
+                                        "enum": [
+                                            "TaxId"
+                                        ]
+                                    },
+                                    "value": {
+                                        "enum": [
+                                            "2 - Tax Identification Number"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "key": {
+                                        "enum": [
+                                            "AlienRegistration"
+                                        ]
+                                    },
+                                    "value": {
+                                        "enum": [
+                                            "4 - Alien Registration Number"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "key": {
+                                        "enum": [
+                                            "CorporateId"
+                                        ]
+                                    },
+                                    "value": {
+                                        "enum": [
+                                            "5 - Corporate Identification"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "properties": {
+                                    "key": {
+                                        "pattern": "^(?i)(oth)-[0-9a-zA-Z-]*$"
+                                    },
+                                    "value": {
+                                        "pattern": "^[9]{1} - [0-9a-zA-Z ]*$"
+                                    }
+                                }
+                            }
+                        ],
+                        "required": [
+                            "key",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array",
+                    "uniqueItems": true
+                }
+            },
+            "required": [
+                "identificationType",
+                "defaultImportIdentificationType"
+            ],
+            "type": "object"
+        },
+        "incomingWiresConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "autoInitiateRecurringWireAmount": {
+                    "maxLength": 14,
+                    "pattern": "^[0-9_.]+$",
+                    "type": "string"
+                },
+                "autoInitiateWireAmount": {
+                    "maxLength": 14,
+                    "pattern": "^[0-9_.]+$",
+                    "type": "string"
+                },
+                "fieldsAllowedforIncomingWireEdit": {
+                    "additionalItems": false,
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                },
+                "incomingWireMatchIndicator": {
+                    "type": "string"
+                },
+                "incomingWireRoleLimits": {
+                    "additionalItems": false,
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "initiateWire": {
+                                "type": "boolean"
+                            },
+                            "role": {
+                                "type": "string"
+                            },
+                            "userLimitPerDay": {
+                                "maxLength": 14,
+                                "pattern": "^[0-9_.]+$",
+                                "type": "string"
+                            },
+                            "userLimitPerWire": {
+                                "maxLength": 14,
+                                "pattern": "^[0-9_.]+$",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "role",
+                            "initiateWire",
+                            "userLimitPerWire",
+                            "userLimitPerDay"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "incomingWireMatchIndicator",
+                "fieldsAllowedforIncomingWireEdit",
+                "autoInitiateWireAmount",
+                "autoInitiateRecurringWireAmount",
+                "incomingWireRoleLimits"
+            ],
+            "type": "object"
+        },
+        "ofacConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "checkOFAC": {
+                    "type": "boolean"
+                },
+                "confidenceMatchPercentage": {
+                    "type": "number"
+                },
+                "runOFAC": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "checkOFAC",
+                "confidenceMatchPercentage",
+                "runOFAC"
+            ],
+            "type": "object"
+        },
+        "outgoingWiresConfiguration": {
+            "additionalProperties": false,
+            "properties": {
+                "autoInitiateRecurringWireAmount": {
+                    "maxLength": 14,
+                    "pattern": "^[0-9_.]+$",
+                    "type": "string"
+                },
+                "autoInitiateWireAmount": {
+                    "maxLength": 14,
+                    "pattern": "^[0-9_.]+$",
+                    "type": "string"
+                },
+                "initiateAfterCutoffTime": {
+                    "type": "boolean"
+                },
+                "outgoingWireRoleLimits": {
+                    "additionalItems": false,
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "initiateWire": {
+                                "type": "boolean"
+                            },
+                            "role": {
+                                "type": "string"
+                            },
+                            "userLimitPerDay": {
+                                "maxLength": 14,
+                                "pattern": "^[0-9_.]+$",
+                                "type": "string"
+                            },
+                            "userLimitPerWire": {
+                                "maxLength": 14,
+                                "pattern": "^[0-9_.]+$",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "role",
+                            "initiateWire",
+                            "userLimitPerWire",
+                            "userLimitPerDay"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "autoInitiateWireAmount",
+                "autoInitiateRecurringWireAmount",
+                "initiateAfterCutoffTime",
+                "outgoingWireRoleLimits"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "accountConfiguration",
+        "detailsConfiguration",
+        "outgoingWiresConfiguration",
+        "cutOffTimesConfiguration",
+        "ofacConfiguration",
+        "incomingWiresConfiguration",
+        "identificationConfiguration"
+    ],
+    "type": "object"
+}

@@ -1,0 +1,110 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "incomingWireFees": {
+            "items": {
+                "properties": {
+                    "analysisCounter": {
+                        "type": "string"
+                    },
+                    "feeTransactionCode": {
+                        "type": "string"
+                    },
+                    "foreignFee": {
+                        "maxLength": 13,
+                        "type": "string"
+                    },
+                    "notOnUsFeeAmount": {
+                        "maxLength": 13,
+                        "type": "string"
+                    },
+                    "onUsFeeAmount": {
+                        "maxLength": 13,
+                        "type": "string"
+                    },
+                    "wireCategory": {
+                        "enum": [
+                            "RegularWires",
+                            "InPersonWire",
+                            "ReturnWires",
+                            "RepetitiveWires",
+                            "RecurringWires",
+                            "Internet",
+                            "TreasuryManagement",
+                            "ThirdParty"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "wireCategory",
+                    "feeTransactionCode",
+                    "onUsFeeAmount",
+                    "analysisCounter",
+                    "notOnUsFeeAmount",
+                    "foreignFee"
+                ],
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": true
+        },
+        "officerRequiredToWaveFee": {
+            "type": "boolean"
+        },
+        "outgoingWireFees": {
+            "items": {
+                "properties": {
+                    "analysisCounter": {
+                        "type": "string"
+                    },
+                    "feeTransactionCode": {
+                        "type": "string"
+                    },
+                    "foreignFee": {
+                        "maxLength": 13,
+                        "type": "string"
+                    },
+                    "notOnUsFeeAmount": {
+                        "maxLength": 13,
+                        "type": "string"
+                    },
+                    "onUsFeeAmount": {
+                        "maxLength": 13,
+                        "type": "string"
+                    },
+                    "wireCategory": {
+                        "enum": [
+                            "RegularWires",
+                            "InPersonWire",
+                            "ReturnWires",
+                            "RepetitiveWires",
+                            "RecurringWires",
+                            "Internet",
+                            "TreasuryManagement",
+                            "ThirdParty"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "wireCategory",
+                    "feeTransactionCode",
+                    "onUsFeeAmount",
+                    "analysisCounter",
+                    "notOnUsFeeAmount",
+                    "foreignFee"
+                ],
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "outgoingWireFees",
+        "incomingWireFees",
+        "officerRequiredToWaveFee"
+    ],
+    "type": "object"
+}

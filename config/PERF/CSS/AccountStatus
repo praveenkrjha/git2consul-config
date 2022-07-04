@@ -1,0 +1,258 @@
+[
+    {
+        "accountInfo": [
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    }
+                ],
+                "type": "Deposit"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    }
+                ],
+                "type": "Savings"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    }
+                ],
+                "type": "ChristmasClub"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "3",
+                        "value": "Matured Not Paid"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New"
+                    }
+                ],
+                "type": "Loan"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "3",
+                        "value": "Matured Not Paid"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New"
+                    }
+                ],
+                "type": "Overdraft"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "3",
+                        "value": "Debits Only"
+                    }
+                ],
+                "type": "GeneralLedger"
+            }
+        ],
+        "coreName": "SilverLake"
+    },
+    {
+        "accountInfo": [
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    },
+                    {
+                        "key": "5",
+                        "value": "Do not Close On Zero Balance"
+                    }
+                ],
+                "type": "Deposit"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    },
+                    {
+                        "key": "5",
+                        "value": "Do not Close On Zero Balance"
+                    }
+                ],
+                "type": "Savings"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    },
+                    {
+                        "key": "5",
+                        "value": "Do not Close On Zero Balance"
+                    }
+                ],
+                "type": "ChristmasClub"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "3",
+                        "value": "Matured Not Paid"
+                    },
+                    {
+                        "key": "4",
+                        "value": "New Today"
+                    },
+                    {
+                        "key": "5",
+                        "value": "Open Not Accruing"
+                    }
+                ],
+                "type": "Loan"
+            },
+            {
+                "status": [
+                    {
+                        "key": "A",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "M",
+                        "value": "Matured"
+                    }
+                ],
+                "type": "TimeDeposit"
+            },
+            {
+                "status": [
+                    {
+                        "key": "1",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "3",
+                        "value": "Debits Only"
+                    }
+                ],
+                "type": "GeneralLedger"
+            }
+        ],
+        "coreName": "CIF2020"
+    },
+    {
+        "accountInfo": [
+            {
+                "status": [
+                    {
+                        "key": "",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "P",
+                        "value": "Pending Close"
+                    }
+                ],
+                "type": "DDA"
+            },
+            {
+                "status": [
+                    {
+                        "key": "",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "P",
+                        "value": "Pending Close"
+                    }
+                ],
+                "type": "Savings"
+            }
+        ],
+        "coreName": "CoreDir"
+    },
+    {
+        "accountInfo": [
+            {
+                "status": [
+                    {
+                        "key": "",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "P",
+                        "value": "Pending Close"
+                    }
+                ],
+                "type": "Share"
+            },
+            {
+                "status": [
+                    {
+                        "key": "",
+                        "value": "Active"
+                    },
+                    {
+                        "key": "P",
+                        "value": "Pending Close"
+                    }
+                ],
+                "type": "Draft"
+            }
+        ],
+        "coreName": "Episys"
+    }
+]

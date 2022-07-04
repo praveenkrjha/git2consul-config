@@ -1,0 +1,1123 @@
+{
+    "attributes": [
+        {
+            "name": "customerName",
+            "type": "string",
+            "validations": [
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                },
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "customerName.common"
+        },
+        {
+            "name": "FunctionType",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.wire_details.business_function_code.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "functionType"
+        },
+        {
+            "name": "omad",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.wire_details.omad.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "omad"
+        },
+        {
+            "name": "Type",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.wire_details.wire_type.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "wireTypeSubType"
+        },
+        {
+            "name": "TransactionDescription",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9 ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "transactionDescription"
+        },
+        {
+            "name": "OriginatorName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorName.common"
+        },
+        {
+            "name": "OriginatorAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorAddress.street1"
+        },
+        {
+            "name": "OriginatorAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorAddress.street2"
+        },
+        {
+            "name": "OriginatorAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorAddress.street3"
+        },
+        {
+            "name": "PaymentNotificationName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "140"
+                }
+            ],
+            "value": "paymentNotificationName.common"
+        },
+        {
+            "name": "PaymentNotificationCellNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationCellNumber"
+        },
+        {
+            "name": "PaymentNotificationEmailAddress",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.email_address_format",
+                    "type": "pattern",
+                    "value": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "2048"
+                }
+            ],
+            "value": "paymentNotificationEmailAddress"
+        },
+        {
+            "name": "PaymentNotificationPhoneNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationPhoneNumber"
+        },
+        {
+            "name": "PaymentNotificationFaxNumber",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationFaxNumber"
+        },
+        {
+            "name": "PaymentNotificationCorrelationId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "paymentNotificationCorrelationId"
+        },
+        {
+            "name": "feeSourceName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "alternateSourceCustomerName.common"
+        },
+        {
+            "name": "ReceiveFinancialInstitutionRoutingId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.receiver_fi_information.aba_number.validations.required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": "4250",
+                    "message": "pattern_validations.number_only",
+                    "type": "pattern",
+                    "value": "^[0-9]+$"
+                },
+                {
+                    "errorCode": null,
+                    "message": "add_wire.receiver_fi_information.aba_number.validations.min",
+                    "type": "minlength",
+                    "value": "9"
+                },
+                {
+                    "errorCode": null,
+                    "message": "add_wire.receiver_fi_information.aba_number.validations.max",
+                    "type": "maxlength",
+                    "value": "9"
+                }
+            ],
+            "value": "receiveFinancialInstitutionRoutingId"
+        },
+        {
+            "name": "ReceiveFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "receiveFinancialInstitutionRemarks"
+        },
+        {
+            "name": "ReceiveFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.receiver_fi_information.fi_name.validations.required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "18"
+                }
+            ],
+            "value": "receiveFinancialInstitutionName"
+        },
+        {
+            "name": "BeneficiaryName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryName.common"
+        },
+        {
+            "name": "BeneficiaryAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryAddress.street1"
+        },
+        {
+            "name": "BeneficiaryAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryAddress.street2"
+        },
+        {
+            "name": "BeneficiaryAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryAddress.street3"
+        },
+        {
+            "name": "BeneficiaryAdviceCode",
+            "type": "string",
+            "validations": [],
+            "value": "beneficiaryAdviceCode"
+        },
+        {
+            "name": "OriginatorBeneficiaryRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "originatorBeneficiaryRemarks"
+        },
+        {
+            "name": "BeneficiaryRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryRemarks"
+        },
+        {
+            "name": "BeneficiaryId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "beneficiaryId"
+        },
+        {
+            "name": "BeneficiaryReference",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "16"
+                }
+            ],
+            "value": "beneficiaryReference"
+        },
+        {
+            "name": "OriginatorReference",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9 ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "16"
+                }
+            ],
+            "value": "originatorReference"
+        },
+        {
+            "name": "PaymentMethodDescription",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "paymentMethodDescription"
+        },
+        {
+            "name": "BeneficiaryAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryAdviceRemarks"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionName"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "originatorFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "OriginatorFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "originatorFinancialInstitutionId"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionName"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionAdviceRemarks"
+        },
+        {
+            "name": "FinancialInstitutionToFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "financialInstitutionToFinancialInstitutionRemarks"
+        },
+        {
+            "name": "BeneficiaryFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "beneficiaryFinancialInstitutionRemarks"
+        },
+        {
+            "name": "InstructionFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionName"
+        },
+        {
+            "name": "InstructionFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "InstructionFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "InstructionFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "instructionFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "InstructionFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "instructionFinancialInstitutionId"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionName"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAddress.street1"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAddress2",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAddress.street2"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAddress3",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAddress.street3"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionRemarks"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionId",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "34"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionId"
+        },
+        {
+            "name": "IntermediaryFinancialInstitutionAdviceRemarks",
+            "type": "array",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                }
+            ],
+            "value": "intermediaryFinancialInstitutionAdviceRemarks"
+        },
+        {
+            "name": "disclosureForm",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.originator_information.disclosure_form.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "disclosureForm"
+        },
+        {
+            "name": "remittanceOriginatorName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.originator_information.name.validations.required",
+                    "type": "required",
+                    "value": "true"
+                },
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceOriginatorName"
+        },
+        {
+            "name": "remittanceOriginatorAddress1",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "pattern_validations.alpha_number_special_char",
+                    "type": "pattern",
+                    "value": "^[ A-Za-z0-9@_,''\"'#+\\\\d&/=:\\-!~;`$%\\(\\)?<>\\. ]+$"
+                },
+                {
+                    "type": "maxLength",
+                    "value": "35"
+                }
+            ],
+            "value": "remittanceOriginatorAddress1"
+        },
+        {
+            "name": "remittanceOriginatorAddress2",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceOriginatorAddress2"
+        },
+        {
+            "name": "remittanceOriginatorAddress3",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceOriginatorAddress3"
+        },
+        {
+            "name": "contactType",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.originator_information.contact_type.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "contactType"
+        },
+        {
+            "name": "remittancePhoneNumber",
+            "type": "string",
+            "validations": [],
+            "value": "remittancePhoneNumber"
+        },
+        {
+            "name": "remittanceOriginatorAmount",
+            "type": "currency",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.originator_information.amount.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "remittanceOriginatorAmount"
+        },
+        {
+            "name": "transferTax",
+            "type": "currency",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.originator_information.transfer_tax.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "transferTax"
+        },
+        {
+            "name": "dateAvailable",
+            "type": "datetime",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.originator_information.date_available.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "dateAvailable"
+        },
+        {
+            "name": "remittanceBeneficiaryName",
+            "type": "string",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.beneficiary_information.name.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "remittanceBeneficiaryName"
+        },
+        {
+            "name": "remittanceBeneficiaryAddress1",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceBeneficiaryAddress1"
+        },
+        {
+            "name": "remittanceBeneficiaryAddress2",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceBeneficiaryAddress2"
+        },
+        {
+            "name": "remittanceBeneficiaryAddress3",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceBeneficiaryAddress3"
+        },
+        {
+            "name": "remittanceCurrencyCode",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceCurrencyCode"
+        },
+        {
+            "name": "remittanceExchangeRate",
+            "type": "string",
+            "validations": [],
+            "value": "remittanceExchangeRate"
+        },
+        {
+            "name": "transferAmount",
+            "type": "currency",
+            "validations": [],
+            "value": "transferAmount"
+        },
+        {
+            "name": "otherFee",
+            "type": "currency",
+            "validations": [],
+            "value": "otherFee"
+        },
+        {
+            "name": "remittanceBeneficiaryTotalAmount",
+            "type": "currency",
+            "validations": [],
+            "value": "remittanceBeneficiaryTotalAmount"
+        },
+        {
+            "name": "estimatedFee",
+            "type": "currency",
+            "validations": [
+                {
+                    "errorCode": null,
+                    "message": "add_wire.remittanceScreen.third_party_remittance_information.estimated_fee.validations.required",
+                    "type": "required",
+                    "value": "true"
+                }
+            ],
+            "value": "estimatedFee"
+        },
+        {
+            "name": "estimatedTax",
+            "type": "currency",
+            "validations": [],
+            "value": "estimatedTax"
+        },
+        {
+            "name": "remittancePickupInformationName",
+            "type": "string",
+            "validations": [],
+            "value": "remittancePickupInformationName"
+        },
+        {
+            "name": "remittancePickupInformationAddress1",
+            "type": "string",
+            "validations": [],
+            "value": "remittancePickupInformationAddress1"
+        },
+        {
+            "name": "remittancePickupInformationAddress2",
+            "type": "string",
+            "validations": [],
+            "value": "remittancePickupInformationAddress2"
+        },
+        {
+            "name": "remittancePickupInformationAddress3",
+            "type": "string",
+            "validations": [],
+            "value": "remittancePickupInformationAddress3"
+        }
+    ]
+}

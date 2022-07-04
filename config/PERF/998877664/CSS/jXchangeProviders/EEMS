@@ -1,0 +1,8 @@
+{
+    "ServerName": "jxchange.gadev.jha-sys.com",
+    "Password": "{{secret:s998877664CSSjXchangeProvidersCore}}",
+    "UserName": "CSSDevelopment@dev.jha",
+    "InstEnv": "PROD",
+    "InstRtId": "022309352",
+  	"ValidConsumerProduct": "Silverlake"
+}

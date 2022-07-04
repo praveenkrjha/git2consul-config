@@ -1,0 +1,131 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "ConfigValue": {
+            "properties": {
+                "nonCustomerIncomingWire": {
+                    "items": [
+                        {
+                            "properties": {
+                                "activeWireSource": {
+                                    "type": "boolean"
+                                },
+                                "providerAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "providerAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "providerAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerTransactionCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCodeDescription": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "wireSourceCode",
+                                "wireSourceCodeDescription",
+                                "providerAccountBranchNumber",
+                                "providerAccountAccountNumber",
+                                "providerTransactionCode",
+                                "activeWireSource"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "nonCustomerOutgoingWire": {
+                    "items": [
+                        {
+                            "properties": {
+                                "activeWireSource": {
+                                    "type": "boolean"
+                                },
+                                "providerAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "providerAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "providerAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "providerTransactionCode": {
+                                    "type": "string"
+                                },
+                                "settlementAccountAccountNumber": {
+                                    "maxLength": 7,
+                                    "type": "string"
+                                },
+                                "settlementAccountBranchNumber": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "settlementAccountCostCenter": {
+                                    "maxLength": 4,
+                                    "type": "string"
+                                },
+                                "settlementAccountProductCode": {
+                                    "maxLength": 3,
+                                    "type": "string"
+                                },
+                                "settlementAccountTransactionCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCode": {
+                                    "type": "string"
+                                },
+                                "wireSourceCodeDescription": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "wireSourceCode",
+                                "wireSourceCodeDescription",
+                                "settlementAccountBranchNumber",
+                                "settlementAccountAccountNumber",
+                                "settlementAccountTransactionCode",
+                                "providerAccountBranchNumber",
+                                "providerAccountAccountNumber",
+                                "providerTransactionCode",
+                                "activeWireSource"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "required": [
+                "nonCustomerOutgoingWire",
+                "nonCustomerIncomingWire"
+            ],
+            "type": "object"
+        }
+    },
+    "type": "object"
+}

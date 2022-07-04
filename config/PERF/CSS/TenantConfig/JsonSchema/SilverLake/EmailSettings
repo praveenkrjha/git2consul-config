@@ -1,0 +1,267 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "internetWireWarning": {
+                        "const": true
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "internetWireEmail": {
+                        "minLength": 1
+                    },
+                    "internetWireStates": {
+                        "minItems": 1
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "treasuryManagementWireWarning": {
+                        "const": true
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "treasuryManagementWireEmail": {
+                        "minLength": 1
+                    },
+                    "treasuryManagementWireStates": {
+                        "minItems": 1
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "thirdPartyWireWarning": {
+                        "const": true
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "thirdPartyWireEmail": {
+                        "minLength": 1
+                    },
+                    "thirdPartyWireStates": {
+                        "minItems": 1
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "fedBalanceWarning": {
+                        "const": "Yes"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "fedBalanceWarningEmail": {
+                        "minLength": 1
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "errorProcessingIncomingWireWarning": {
+                        "const": true
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "errorProcessingIncomingWireEmail": {
+                        "minLength": 1
+                    }
+                }
+            }
+        }
+    ],
+    "properties": {
+        "automatedMessage": {
+            "type": "string"
+        },
+        "errorProcessingIncomingWireEmail": {
+            "maxLength": 240,
+            "type": "string"
+        },
+        "errorProcessingIncomingWireWarning": {
+            "type": "boolean"
+        },
+        "fedBalanceWarning": {
+            "type": "string"
+        },
+        "fedBalanceWarningAmount": {
+            "type": "string"
+        },
+        "fedBalanceWarningEmail": {
+            "maxLength": 240,
+            "type": "string"
+        },
+        "incomingWireSubLine": {
+            "type": "string"
+        },
+        "internalEmailSettings": {
+            "items": [
+                {
+                    "properties": {
+                        "emailAddress": {
+                            "maxLength": 75,
+                            "type": "string"
+                        },
+                        "emailNotificationType": {
+                            "items": [
+                                {
+                                    "type": "string"
+                                }
+                            ],
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "emailAddress",
+                        "emailNotificationType"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "type": "array"
+        },
+        "internetWireEmail": {
+            "maxLength": 240,
+            "type": "string"
+        },
+        "internetWireStates": {
+            "items": [
+                {
+                    "properties": {
+                        "processStep": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "processStep",
+                        "state"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "type": "array"
+        },
+        "internetWireWarning": {
+            "type": "boolean"
+        },
+        "outgoingWireSubLine": {
+            "type": "string"
+        },
+        "returnAddress": {
+            "maxLength": 75,
+            "type": "string"
+        },
+        "returnAddressAlias": {
+            "type": "string"
+        },
+        "salutation": {
+            "maxLength": 75,
+            "type": "string"
+        },
+        "senderSignature": {
+            "maxLength": 75,
+            "type": "string"
+        },
+        "thirdPartyWireEmail": {
+            "maxLength": 240,
+            "type": "string"
+        },
+        "thirdPartyWireStates": {
+            "items": [
+                {
+                    "properties": {
+                        "processStep": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "processStep",
+                        "state"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "type": "array"
+        },
+        "thirdPartyWireWarning": {
+            "type": "boolean"
+        },
+        "treasuryManagementWireEmail": {
+            "maxLength": 240,
+            "type": "string"
+        },
+        "treasuryManagementWireStates": {
+            "items": [
+                {
+                    "properties": {
+                        "processStep": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "processStep",
+                        "state"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "type": "array"
+        },
+        "treasuryManagementWireWarning": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "returnAddress",
+        "returnAddressAlias",
+        "incomingWireSubLine",
+        "outgoingWireSubLine",
+        "salutation",
+        "senderSignature",
+        "automatedMessage",
+        "internetWireWarning",
+        "internetWireStates",
+        "internetWireEmail",
+        "treasuryManagementWireWarning",
+        "treasuryManagementWireStates",
+        "treasuryManagementWireEmail",
+        "thirdPartyWireWarning",
+        "thirdPartyWireStates",
+        "thirdPartyWireEmail",
+        "fedBalanceWarningEmail",
+        "errorProcessingIncomingWireWarning",
+        "errorProcessingIncomingWireEmail",
+        "internalEmailSettings"
+    ],
+    "type": "object"
+}

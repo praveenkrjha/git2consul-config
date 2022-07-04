@@ -1,0 +1,4 @@
+{
+    "ConnectionString": "{{config:CSS.Mongo.ConnectionPrefix}}://cssNotes_user:{{secret:CSSNotes-Mongo-Password}}@{{config:CSS.Mongo.HostNames}}/{{config:CSS.Mongo.ConnectionSuffix}}",
+    "DatabaseName": "cssNotes"
+}
